@@ -54,7 +54,6 @@ class EditSendToDB{
         let storage = Storage.storage().reference(forURL: "gs://originalapplication-f9c27.appspot.com")
         let imageKey = storage.child("MemoImage")
         let imageRef = storage.child("MemoImage").child("\(String(describing: imageKey)).jpeg")
-        //editMemoImageData = editImageView.image?.jpegData(compressionQuality: 0.01) as! Data
         
         imageRef.putData(editMemoImageData, metadata: nil){metadata, error in
             

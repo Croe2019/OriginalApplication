@@ -21,9 +21,9 @@ class EditViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
     var memoTextBodyString = String()
     var editMemoImageString = String()
     var editMemoImageData = Data()
-    // テストコード
+    
     var indexNumber = Int()
-    // autoID表示用配列
+    // autoID格納配列
     var autoIDArray = [String]()
     
     let editSendToDB = EditSendToDB()
@@ -95,9 +95,8 @@ class EditViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
     func upDate(){
 
         let textMemo = Memo(textTitle: editTitleTextField.text!, textMemoData: editMemoBodyView.text!)
-        // refの中身が間違っているのか？
+        
         let ref = Database.database().reference().child("Record").child(Auth.auth().currentUser!.uid)
-        // 条件が間違っているのか？
         
         for autoID in autoIDArray{
             
