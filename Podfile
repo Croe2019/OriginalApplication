@@ -21,5 +21,7 @@ pod 'FacebookCore'
 pod 'FacebookLogin'
 pod 'FacebookShare'
 pod 'SDWebImage/WebP'
+pod 'FSCalendar'
+pod 'CalculateCalendarLogic' 
 
 end
