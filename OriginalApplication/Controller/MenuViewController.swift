@@ -21,7 +21,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         // ホーム、ゴミ箱はデフォルトで表示する
         // メニューの機能実装時には変更する
-        menuList = ["新規作成", "ホーム", "ゴミ箱"]
+        menuList = ["新規作成", "ホーム", "検索", "ゴミ箱"]
         menuTableView.delegate = self
         menuTableView.dataSource = self
     }
@@ -75,7 +75,8 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
             performSegue(withIdentifier: "create", sender: nil)
         case 1:
             self.dismiss(animated: true, completion: nil)
-        case 2: return // ゴミ箱機能は現在無いため、あとで追加
+        case 2: performSegue(withIdentifier: "Search", sender: nil)
+        case 3: return // ゴミ箱機能が現在ないため
         
         default:
             return

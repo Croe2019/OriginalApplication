@@ -11,11 +11,9 @@ import Firebase
 import FSCalendar
 import CalculateCalendarLogic
 
-class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSource, FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance {
+class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var memoTableView: UITableView!
-    @IBOutlet weak var calendar: FSCalendar!
-    
     
     var memoArray = [Memo]()
     
@@ -37,15 +35,10 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         memoTableView.delegate = self
         memoTableView.dataSource = self
         
-        calendar.dataSource = self
-        calendar.delegate = self
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        let ref = Database.database().reference()
         
         self.memoArray.removeAll()
         self.memoTableView.reloadData()
@@ -54,7 +47,7 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             if let user = user?.uid{
                 
-                let ref = Database.database().reference().child("Record").child(Auth.auth().currentUser!.uid).queryLimited(toFirst: 100).observe(.value) { (snapShot) in
+                let ref = Database.database().reference().child("Record").child(Auth.auth().currentUser!.uid).queryLimited(toLast: 100).observe(.value) { (snapShot) in
                     
                     if let snapShot = snapShot.children.allObjects as? [DataSnapshot]{
                         
@@ -93,73 +86,8 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
-    fileprivate let gregorian: Calendar = Calendar(identifier: .gregorian)
-    fileprivate lazy var dateFormatter: DateFormatter = {
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        return formatter
-    }()
     
-    // 祝日判定を行い結果を返すメソッド(True:祝日)
-        func judgeHoliday(_ date : Date) -> Bool {
-            //祝日判定用のカレンダークラスのインスタンス
-            let tmpCalendar = Calendar(identifier: .gregorian)
-
-            // 祝日判定を行う日にちの年、月、日を取得
-            let year = tmpCalendar.component(.year, from: date)
-            let month = tmpCalendar.component(.month, from: date)
-            let day = tmpCalendar.component(.day, from: date)
-
-            // CalculateCalendarLogic()：祝日判定のインスタンスの生成
-            let holiday = CalculateCalendarLogic()
-
-            return holiday.judgeJapaneseHoliday(year: year, month: month, day: day)
-        }
-        // date型 -> 年月日をIntで取得
-        func getDay(_ date:Date) -> (Int,Int,Int){
-            let tmpCalendar = Calendar(identifier: .gregorian)
-            let year = tmpCalendar.component(.year, from: date)
-            let month = tmpCalendar.component(.month, from: date)
-            let day = tmpCalendar.component(.day, from: date)
-            return (year,month,day)
-        }
-    
-    //曜日判定(日曜日:1 〜 土曜日:7)
-        func getWeekIdx(_ date: Date) -> Int{
-            let tmpCalendar = Calendar(identifier: .gregorian)
-            return tmpCalendar.component(.weekday, from: date)
-        }
-
-        // 土日や祝日の日の文字色を変える
-        func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDefaultColorFor date: Date) -> UIColor? {
-            //祝日判定をする（祝日は赤色で表示する）
-            if self.judgeHoliday(date){
-                return UIColor.red
-            }
-
-            //土日の判定を行う（土曜日は青色、日曜日は赤色で表示する）
-            let weekday = self.getWeekIdx(date)
-            if weekday == 1 {   //日曜日
-                return UIColor.red
-            }
-            else if weekday == 7 {  //土曜日
-                return UIColor.blue
-            }
-
-            return nil
-        }
-    
-    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        
-        let selectDay = getDay(date)
-    }
-    
-   
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return memoArray.count
@@ -209,7 +137,7 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    // テストコード
+    // テキスト、画像の両方を取得
     func FeachData(){
         
         let ref = Database.database().reference().child("Record").child(Auth.auth().currentUser!.uid).queryLimited(toLast: 100).observe(.value) { (snapShot) in
@@ -236,7 +164,7 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    // キー値を取得しないでデータを取得
+    // 画像を取得
     func FetchImageData(){
         
         let ref = Database.database().reference().child("Record").child(Auth.auth().currentUser!.uid).queryLimited(toLast: 100).observe(.value) { (snapShot) in
@@ -265,7 +193,7 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    // キー値を指定して、データを取得
+    // テキスト形式のメモを取得
     func FetchTextData(){
         
         let ref = Database.database().reference().child("Record").child(Auth.auth().currentUser!.uid).queryLimited(toLast: 100).observe(.value) { (snapShot) in

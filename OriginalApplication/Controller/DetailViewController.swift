@@ -28,9 +28,6 @@ class DetailViewController: UIViewController {
         memoTitle.text = memoTextTitleString
         memoTextBody.text = memoTextBodyString
         memoImageView.sd_setImage(with: URL(string:memoImageString), completed: nil)
-        // 渡されたautoIDを表示
-        print("渡されたID",indexNumber)
-        
         
     }
     
