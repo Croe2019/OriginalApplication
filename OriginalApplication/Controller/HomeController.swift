@@ -11,11 +11,14 @@ import Firebase
 import FSCalendar
 import CalculateCalendarLogic
 
-class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var memoTableView: UITableView!
+    @IBOutlet weak var searchField: UISearchBar!
     
     var memoArray = [Memo]()
+    // 検索結果を格納する配列
+    var searchResult = [Memo]()
     
     var memoTitle = String()
     var memoTextBody = String()
@@ -34,6 +37,7 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         memoTableView.delegate = self
         memoTableView.dataSource = self
+        searchField.delegate = self
         
     }
     
@@ -86,18 +90,88 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        self.view.endEditing(true)
+        searchBar.showsCancelButton = true
+        
+        let ref = Database.database().reference().child("Record").child(Auth.auth().currentUser!.uid).observe(.value) { (snapShot) in
+            
+            self.memoArray.removeAll()
+            if let snapShot = snapShot.children.allObjects as? [DataSnapshot]{
+                
+                for snap in snapShot{
+                    
+                    if let memoData = snap.value as? [String:Any]{
+                        
+                        let memoTitle = memoData["memoTitle"] as? String
+                        let memoTextData = memoData["memoBody"] as? String
+                        let memoImageString = memoData["memoImage"] as? String
+                        
+                        if(self.searchField.text! == memoTitle){
+                            
+                            // 値の入れ方が間違っているのでしょうか？
+                            self.searchResult.append(Memo.init(textTitle: memoTitle!, textMemoData: memoTextData!, memoImageString: memoImageString!))
+                        }
+                        else{
+                            
+                            self.memoArray.append(Memo.init(textTitle: memoTitle!, textMemoData: memoTextData!, memoImageString: memoImageString!))
+                        }
+                        
+                    }
+                }
+                
+            }
+            
+            self.memoTableView.reloadData()
+        }
+        
+    }
     
+    // キャンセルボタン処理
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        
+        searchBar.showsCancelButton = false
+        self.view.endEditing(true)
+        searchBar.text = ""
+        memoTableView.reloadData()
+    }
+    
+    // キャンセルボタンを表示
+    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+        
+        searchBar.showsCancelButton = true
+        return true
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return memoArray.count
+        // 検索しない時はDBから取得したメモを表示
+        if(searchField.text! == ""){
+            
+            return memoArray.count
+        }else{
+            
+            // テキストが入っているときは検索した方を表示
+            return searchResult.count
+        }
+        
+     //   return memoArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = memoTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        cell.textLabel!.text = memoArray[indexPath.row].GetTextTitle()
+        if(searchField.text! == ""){
+            
+            cell.textLabel!.text = memoArray[indexPath.row].GetTextTitle()
+        }else{
+            
+            cell.textLabel!.text = searchResult[indexPath.row].GetTextTitle()
+        }
+        
+        //cell.textLabel!.text = memoArray[indexPath.row].GetTextTitle()
     
         return cell
     }

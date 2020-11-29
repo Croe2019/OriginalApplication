@@ -15,8 +15,6 @@
 		FE6BE6E624CAF8D700F82F7A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6BE6E524CAF8D700F82F7A /* MenuViewController.swift */; };
 		FE6E944D24D57D0D00CCD0E2 /* CreateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E944C24D57D0D00CCD0E2 /* CreateController.swift */; };
 		FE87C5CE2529E095004FECC1 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87C5CD2529E094004FECC1 /* EditViewController.swift */; };
-		FE9145C8256FCA1E0047961A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9145C7256FCA1E0047961A /* SearchViewController.swift */; };
-		FE9145CB256FCCED0047961A /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9145CA256FCCED0047961A /* SearchResultViewController.swift */; };
 		FE96862F252ECA7B005FFD8E /* EditSendToDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE96862E252ECA7B005FFD8E /* EditSendToDB.swift */; };
 		FE9B67C324DC0E3B00EC2AFF /* SendToDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9B67C224DC0E3B00EC2AFF /* SendToDB.swift */; };
 		FE9B67C524DC16F200EC2AFF /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9B67C424DC16F200EC2AFF /* Memo.swift */; };
@@ -43,8 +41,6 @@
 		FE6BE6E524CAF8D700F82F7A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		FE6E944C24D57D0D00CCD0E2 /* CreateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateController.swift; sourceTree = "<group>"; };
 		FE87C5CD2529E094004FECC1 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
-		FE9145C7256FCA1E0047961A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		FE9145CA256FCCED0047961A /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		FE96862E252ECA7B005FFD8E /* EditSendToDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSendToDB.swift; sourceTree = "<group>"; };
 		FE9B67C224DC0E3B00EC2AFF /* SendToDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendToDB.swift; sourceTree = "<group>"; };
 		FE9B67C424DC16F200EC2AFF /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
@@ -133,8 +129,6 @@
 				FE6E944C24D57D0D00CCD0E2 /* CreateController.swift */,
 				FEB66C1F24FBB10F00BCA41F /* DetailViewController.swift */,
 				FE87C5CD2529E094004FECC1 /* EditViewController.swift */,
-				FE9145C7256FCA1E0047961A /* SearchViewController.swift */,
-				FE9145CA256FCCED0047961A /* SearchResultViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -288,10 +282,8 @@
 				FE6BE6E624CAF8D700F82F7A /* MenuViewController.swift in Sources */,
 				FE0A0DA024EFDE21006BA118 /* LogOut.swift in Sources */,
 				FE6E944D24D57D0D00CCD0E2 /* CreateController.swift in Sources */,
-				FE9145C8256FCA1E0047961A /* SearchViewController.swift in Sources */,
 				FE01510E24C473D90046A550 /* HomeController.swift in Sources */,
 				FEDE11F424B8893A008FB1CF /* AppDelegate.swift in Sources */,
-				FE9145CB256FCCED0047961A /* SearchResultViewController.swift in Sources */,
 				FEDE11F624B8893A008FB1CF /* SceneDelegate.swift in Sources */,
 				FE1D5BC124C46E3A0097B2F1 /* Register.swift in Sources */,
 				FEB66C2024FBB10F00BCA41F /* DetailViewController.swift in Sources */,
