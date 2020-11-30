@@ -68,14 +68,6 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                     self.FeachData()
                                     
                                 }
-                                else if(memoImageData != "" && memoTitle == "" && memoTextData == ""){
-                                    
-                                    self.FetchImageData()
-                                }
-                                else if(memoTextData != "" && memoTitle != "" && memoImageData == ""){
-                                    
-                                    self.FetchTextData()
-                                }
                             }
                             
                         }
@@ -97,6 +89,7 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let ref = Database.database().reference().child("Record").child(Auth.auth().currentUser!.uid).observe(.value) { (snapShot) in
             
+            self.searchResult.removeAll()
             self.memoArray.removeAll()
             if let snapShot = snapShot.children.allObjects as? [DataSnapshot]{
                 
@@ -108,13 +101,19 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         let memoTextData = memoData["memoBody"] as? String
                         let memoImageString = memoData["memoImage"] as? String
                         
+                        // タイトルを入力して一致するものがあれば表示
                         if(self.searchField.text! == memoTitle){
                             
-                            // 値の入れ方が間違っているのでしょうか？
+                            self.searchResult.append(Memo.init(textTitle: memoTitle!, textMemoData: memoTextData!, memoImageString: memoImageString!))
+                        }
+                        else if(self.searchField.text!.prefix(3) == memoTitle!.prefix(3)){
+                            
+                            // 先頭3文字が一致しているメモがあればある分表示
                             self.searchResult.append(Memo.init(textTitle: memoTitle!, textMemoData: memoTextData!, memoImageString: memoImageString!))
                         }
                         else{
                             
+                            // 検索ワードが無ければ、全てのメモを表示
                             self.memoArray.append(Memo.init(textTitle: memoTitle!, textMemoData: memoTextData!, memoImageString: memoImageString!))
                         }
                         
@@ -156,7 +155,6 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return searchResult.count
         }
         
-     //   return memoArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -170,8 +168,6 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             cell.textLabel!.text = searchResult[indexPath.row].GetTextTitle()
         }
-        
-        //cell.textLabel!.text = memoArray[indexPath.row].GetTextTitle()
     
         return cell
     }
@@ -183,10 +179,21 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        memoTitle = memoArray[indexPath.row].GetTextTitle()
-        memoTextBody = memoArray[indexPath.row].GetTextMemoData()
+        if(searchField.text! == ""){
+            
+            memoTitle = memoArray[indexPath.row].GetTextTitle()
+            memoTextBody = memoArray[indexPath.row].GetTextMemoData()
+            
+            memoImageString = memoArray[indexPath.row].GetImageString()
+        }
+        else{
+            
+            memoTitle = searchResult[indexPath.row].GetTextTitle()
+            memoTextBody = searchResult[indexPath.row].GetTextMemoData()
+            
+            memoImageString = searchResult[indexPath.row].GetImageString()
+        }
         
-        memoImageString = memoArray[indexPath.row].GetImageString()
         // テストコード 2番号を格納
         indexNumber = indexPath.row
         print("autoID",indexNumber)
