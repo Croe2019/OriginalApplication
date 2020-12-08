@@ -22,6 +22,7 @@ pod 'FacebookLogin'
 pod 'FacebookShare'
 pod 'SDWebImage/WebP'
 pod 'FSCalendar'
-pod 'CalculateCalendarLogic' 
+pod 'CalculateCalendarLogic'
+pod 'FSPagerView'
 
 end
