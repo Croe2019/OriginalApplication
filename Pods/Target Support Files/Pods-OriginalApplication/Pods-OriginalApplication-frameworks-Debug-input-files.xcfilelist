@@ -1,6 +1,7 @@
 ${PODS_ROOT}/Target Support Files/Pods-OriginalApplication/Pods-OriginalApplication-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework
 ${BUILT_PRODUCTS_DIR}/CalculateCalendarLogic/CalculateCalendarLogic.framework
+${BUILT_PRODUCTS_DIR}/ELCImagePickerController/ELCImagePickerController.framework
 ${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework
 ${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework
 ${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework

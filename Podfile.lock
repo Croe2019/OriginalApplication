@@ -219,6 +219,7 @@ PODS:
     - BoringSSL-GRPC/Interface (= 0.0.7)
   - BoringSSL-GRPC/Interface (0.0.7)
   - CalculateCalendarLogic (0.4.0)
+  - ELCImagePickerController (0.2.0)
   - FacebookCore (0.9.0):
     - FBSDKCoreKit (~> 5.0)
   - FacebookLogin (0.9.0):
@@ -399,6 +400,7 @@ PODS:
 
 DEPENDENCIES:
   - CalculateCalendarLogic
+  - ELCImagePickerController
   - FacebookCore
   - FacebookLogin
   - FacebookSDK
@@ -421,6 +423,7 @@ SPEC REPOS:
     - abseil
     - BoringSSL-GRPC
     - CalculateCalendarLogic
+    - ELCImagePickerController
     - FacebookCore
     - FacebookLogin
     - FacebookSDK
@@ -458,6 +461,7 @@ SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
   CalculateCalendarLogic: 84d3aff9456340ff07f7b77242a57b5d2f0ed631
+  ELCImagePickerController: b1b7084434a7d49f2cfc916bde1f3ba353d38de9
   FacebookCore: ba86524b66cfa86d0f8e65d08faa8504a9f732dd
   FacebookLogin: 6cee9fd6e1fe976fe8f7eec199e27b28b14f5d63
   FacebookSDK: 40811aca4741187ac7e6b175f261edee4edfc58a
@@ -491,6 +495,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 00886b4ae808402b3422bf05895c7dee15d8c7a5
+PODFILE CHECKSUM: 109b5c7f3ed46e3bf85950bac8a2a12b4228466e
 
 COCOAPODS: 1.9.3

@@ -24,5 +24,6 @@ pod 'SDWebImage/WebP'
 pod 'FSCalendar'
 pod 'CalculateCalendarLogic'
 pod 'FSPagerView'
+pod 'ELCImagePickerController'
 
 end

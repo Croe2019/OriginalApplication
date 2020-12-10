@@ -8,9 +8,9 @@
 
 import UIKit
 import Firebase
+import FSPagerView
 
-class DetailViewController: UIViewController {
-    
+class DetailViewController: UIViewController, FSPagerViewDelegate, FSPagerViewDataSource {
     
     @IBOutlet weak var memoTitle: UILabel!
     @IBOutlet weak var memoTextBody: UILabel!
@@ -27,7 +27,15 @@ class DetailViewController: UIViewController {
 
         memoTitle.text = memoTextTitleString
         memoTextBody.text = memoTextBodyString
-        memoImageView.sd_setImage(with: URL(string:memoImageString), completed: nil)
+        // pagerView生成
+        let pagerView = FSPagerView()
+        pagerView.delegate = self
+        pagerView.dataSource = self
+        pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
+        self.view.addSubview(pagerView)
+        let pageControl = FSPageControl()
+        self.view.addSubview(pageControl)
+//        memoImageView.sd_setImage(with: URL(string:memoImageString), completed: nil)
         
     }
     
@@ -46,5 +54,20 @@ class DetailViewController: UIViewController {
         }
     }
     
+    // ここにメモごとに保存してある画像の数を返せば良いでしょうか？
+    // その際はメモの配列を作る必要があるでしょうか？
+    func numberOfItems(in pagerView: FSPagerView) -> Int {
+        
+        return numberOfItems(in: pagerView)
+    }
     
+    // 画像を表示するときはcellを使う必要があるのでしょうか？
+    func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
+        
+        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
+        // メモの画像を入れる
+        cell.imageView?.image = memoImageView.image
+        
+        return cell
+    }
 }
