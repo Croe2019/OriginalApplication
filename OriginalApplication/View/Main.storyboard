@@ -163,18 +163,18 @@
                                 <rect key="frame" x="46" y="282" width="277" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hYg-6Q-kRT" customClass="FSPagerView" customModule="FSPagerView">
-                                <rect key="frame" x="37" y="55" width="307" height="167"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nWv-No-KpL">
+                                <rect key="frame" x="47" y="56" width="275" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AvJ-HW-PrZ" customClass="FSPageControl" customModule="OriginalApplication" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="124" width="291" height="35"/>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="RXd-2f-RhN">
+                                        <rect key="frame" x="76" y="104" width="151" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
+                                    </pageControl>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
+                                <viewLayoutGuide key="contentLayoutGuide" id="h0S-7v-djD"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="c2G-Ir-DUi"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BVr-lf-Mxk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -182,10 +182,10 @@
                     <navigationItem key="navigationItem" id="vJy-yo-mw9"/>
                     <connections>
                         <outlet property="memoImageView" destination="l89-Pb-MAE" id="Qeb-La-7L8"/>
+                        <outlet property="memoScrollView" destination="nWv-No-KpL" id="VtT-Ed-yOr"/>
                         <outlet property="memoTextBody" destination="bhC-Jl-ZUJ" id="7DT-ve-Mc4"/>
                         <outlet property="memoTitle" destination="8r5-OE-u8a" id="GFL-0L-qPS"/>
-                        <outlet property="pageControl" destination="AvJ-HW-PrZ" id="veq-as-04B"/>
-                        <outlet property="pagerView" destination="hYg-6Q-kRT" id="WI5-HI-Nua"/>
+                        <outlet property="pageControl" destination="RXd-2f-RhN" id="omG-RR-tne"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oWF-ln-y6S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
