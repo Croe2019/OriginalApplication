@@ -15,7 +15,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     @IBOutlet weak var memoTitle: UILabel!
     @IBOutlet weak var memoTextBody: UILabel!
     @IBOutlet weak var memoImageView: UIImageView!
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var memoImageCollection: UICollectionView!
     
     
     var memoTextTitleString = String()
@@ -28,6 +28,8 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        memoImageCollection.dataSource = self
+        memoImageCollection.delegate = self
         memoTitle.text = memoTextTitleString
         memoTextBody.text = memoTextBodyString
         print("画像の値", memoImageString)
@@ -47,13 +49,13 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         // ストーリーボードで設定したID
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        // タグ番号を使ってImageViewのインスタンスヲッ生成
+        let cell = memoImageCollection.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+        // タグ番号を使ってImageViewのインスタンスを生成
         let imageView = cell.contentView.viewWithTag(1) as! UIImageView
-        // 要素の名前を画像のUIImageとする 後で配列化する
-        let cellImage = UIImage(named: memoImageString)
+    
         // UIImageをUIImageViewのimageとして設定
-        imageView.image = cellImage
+        // 後で複数表示したいので画像を複数DBに保存できる機能を実装したら配列化
+        imageView.sd_setImage(with: URL(string: memoImageString), completed: nil)
         
         return cell
     }

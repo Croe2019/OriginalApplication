@@ -175,7 +175,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="feA-JW-h81">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="feA-JW-h81">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gJ9-zd-ET6">
@@ -201,7 +201,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="vJy-yo-mw9"/>
                     <connections>
-                        <outlet property="collectionView" destination="eGi-0q-rAh" id="sIc-we-NYi"/>
+                        <outlet property="memoImageCollection" destination="eGi-0q-rAh" id="k9C-Lk-Phq"/>
                         <outlet property="memoImageView" destination="l89-Pb-MAE" id="Qeb-La-7L8"/>
                         <outlet property="memoTextBody" destination="bhC-Jl-ZUJ" id="7DT-ve-Mc4"/>
                         <outlet property="memoTitle" destination="8r5-OE-u8a" id="GFL-0L-qPS"/>
