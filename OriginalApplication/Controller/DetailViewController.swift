@@ -17,7 +17,6 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     @IBOutlet weak var memoImageView: UIImageView!
     @IBOutlet weak var memoImageCollection: UICollectionView!
     
-    
     var memoTextTitleString = String()
     var memoTextBodyString = String()
     var memoImageString = String()
@@ -43,7 +42,8 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         // 要素数を入れる
-        return memoArray.count
+        // 保存している画像の数が多く表示されるため -5を追加
+        return memoArray.count - 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -55,7 +55,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     
         // UIImageをUIImageViewのimageとして設定
         // 後で複数表示したいので画像を複数DBに保存できる機能を実装したら配列化
-        imageView.sd_setImage(with: URL(string: memoImageString), completed: nil)
+        imageView.sd_setImage(with: URL(string: memoArray[indexNumber].GetImageString()), completed: nil)
         
         return cell
     }
@@ -73,6 +73,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
             editVC.indexNumber = indexNumber
             // 画像の値を渡す
             editVC.editMemoImageString = memoImageString
+            // 編集画面へ遷移する際も配列で値を渡す
         }
     }
     

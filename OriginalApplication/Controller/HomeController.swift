@@ -211,6 +211,8 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
             detailVC.memoTextBodyString = memoTextBody
             // 画像の値を渡す
             detailVC.memoImageString = memoImageString
+            // テストコード
+            detailVC.memoArray = memoArray
             // テストコード 詳細画面へ値を渡す
             detailVC.indexNumber = indexNumber
             
