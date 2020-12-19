@@ -181,4 +181,10 @@ class CreateController: UIViewController, UITextFieldDelegate, UIImagePickerCont
         picker.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func backHome(_ sender: Any) {
+        
+        // 画面遷移 ホーム画面へ戻る
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
 }
