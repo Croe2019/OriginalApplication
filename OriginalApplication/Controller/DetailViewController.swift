@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import FSPagerView
 
 class DetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -31,7 +30,6 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         memoImageCollection.delegate = self
         memoTitle.text = memoTextTitleString
         memoTextBody.text = memoTextBodyString
-        print("画像の値", memoImageString)
         memoImageView.sd_setImage(with: URL(string:memoImageString), completed: nil)
     }
     
@@ -42,7 +40,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         // 要素数を入れる
-        // 保存している画像の数が多く表示されるため -5を追加
+        // 保存している画像の数が多く表示されるため 一時的に-5を追加
         return memoArray.count - 5
     }
     
@@ -56,6 +54,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         // UIImageをUIImageViewのimageとして設定
         // 後で複数表示したいので画像を複数DBに保存できる機能を実装したら配列化
         imageView.sd_setImage(with: URL(string: memoArray[indexNumber].GetImageString()), completed: nil)
+        print("画像の値", memoArray[indexNumber].GetImageString())
         
         return cell
     }
