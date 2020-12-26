@@ -40,8 +40,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         // 要素数を入れる
-        // 保存している画像の数が多く表示されるため 一時的に-5を追加
-        return memoArray.count - 5
+        return memoArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

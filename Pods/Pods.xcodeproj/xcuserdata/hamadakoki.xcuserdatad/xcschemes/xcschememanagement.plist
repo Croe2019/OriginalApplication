@@ -9,7 +9,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>CalculateCalendarLogic.xcscheme</key>
+		<key>DKImagePickerController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -120,16 +120,6 @@
 			<false/>
 		</dict>
 		<key>GoogleUtilities.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ImagePicker-ImagePicker.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ImagePicker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

@@ -9,7 +9,6 @@
 import UIKit
 import Firebase
 import FSCalendar
-import CalculateCalendarLogic
 
 class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     

@@ -28,30 +28,35 @@ class SendToDB
         
         let textRef = storage.child("TextMemo").child("\(String(describing: textKey!))")
         let imageRef = storage.child("MemoImage").child("\(String(describing: imageKey!)).jpeg")
+        var memoArray = [Memo]()
         
         // アップロードタスク putFileの方が良ければそちらに変更
-        let uploadTask = imageRef.putData(memoImageData, metadata: nil){
-            (metadata, error) in
+        for memos in memoArray{
             
-            if(error != nil){
+            let uploadTask = imageRef.putData(memoImageData, metadata: nil){
+                (metadata, error) in
                 
-                print(error)
-                return
-            }
-            
-            imageRef.downloadURL { (url, error) in
-                
-                if(url != nil){
+                if(error != nil){
                     
-                    // 送信するものを指定する (最初はテキスト形式のみだが、あとで追加する)
-                    let memoInfo = ["memoTitle":memoTitle as Any, "memoBody":memoTextData as Any, "memoImage":url?.absoluteString as Any]
-                    memoDB.updateChildValues(memoInfo)
+                    print(error)
+                    return
                 }
                 
+                imageRef.downloadURL { (url, error) in
+                    
+                    if(url != nil){
+                        
+                        // 送信するものを指定する (最初はテキスト形式のみだが、あとで追加する)
+                        let memoInfo = ["memoTitle":memoTitle as Any, "memoBody":memoTextData as Any, "memoImage":memos.GetImageString()]
+                        memoDB.updateChildValues(memoInfo)
+                    }
+                    
+                }
             }
+            
+            uploadTask.resume()
         }
         
-        uploadTask.resume()
     }
     
     // テキスト形式のメモを送信

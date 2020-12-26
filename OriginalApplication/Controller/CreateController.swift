@@ -10,14 +10,17 @@ import UIKit
 import Photos
 import SDWebImage
 import Firebase
+import DKImagePickerController
 
-class CreateController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+class CreateController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource{
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var memoTextView: UITextView!
     @IBOutlet weak var memoImageView: UIImageView!
+    @IBOutlet weak var memoCollectionView: UICollectionView!
     
-    
+    // テストコード
+    let dkImagePickerController = DKImagePickerController()
     let sendToDB = SendToDB()
     // 画像名を格納する変数
     var memoImageString:String = String()
@@ -57,7 +60,8 @@ class CreateController: UIViewController, UITextFieldDelegate, UIImagePickerCont
         memoTextView.layer.masksToBounds = true
         
         titleTextField.delegate = self
-        
+        memoCollectionView.delegate = self
+        memoCollectionView.dataSource = self
     }
 
     
@@ -107,79 +111,118 @@ class CreateController: UIViewController, UITextFieldDelegate, UIImagePickerCont
     @IBAction func cameraAction(_ sender: Any) {
         
         // カメラ or アクションシート
-        showAlert()
+        //showAlert()
+        // 選択できる写真の最大数
+        self.dkImagePickerController.maxSelectableCount = 5
+        
+        // カメラモード、写真モードの選択
+        self.dkImagePickerController.sourceType = .photo
+        
+        // キャンセルボタンの有効か
+        self.dkImagePickerController.showsCancelButton = true
+        self.dkImagePickerController.didSelectAssets = {
+            [unowned self] (assets: [DKAsset]) in
+             
+            //選択された画像はassetsに入れて返却されますのでfetchして取り出すとよいでしょう
+            for asset in assets {
+                    asset.fetchFullScreenImage(true, completeBlock: { (image, info) in
+                        self.memoImageView.image = image
+                })
+            }
+        }
+        self.present(dkImagePickerController, animated: true, completion: nil)
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        // 要素数を入れる
+        return self.dkImagePickerController.maxSelectableCount
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        // ストーリーボードで設定したID
+        let cell = memoCollectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+        // ここでCollectionViewに画像を入れれば良いか？
+        
+        return cell
     }
     
     // カメラ立ち上げ
-    func doCamera(){
-        
-        let sourceType:UIImagePickerController.SourceType = .camera
-        
-        // カメラが利用可能かをチェック
-        if(UIImagePickerController.isSourceTypeAvailable(.camera)){
-            
-            let cameraPicker = UIImagePickerController()
-            cameraPicker.allowsEditing = true
-            cameraPicker.sourceType = sourceType
-            cameraPicker.delegate = self
-            self.present(cameraPicker, animated: true, completion: nil)
-        }
-    }
+//    func doCamera(){
+//
+//        let sourceType:UIImagePickerController.SourceType = .camera
+//
+//        // カメラが利用可能かをチェック
+//        if(UIImagePickerController.isSourceTypeAvailable(.camera)){
+//
+//            let cameraPicker = UIImagePickerController()
+//            cameraPicker.allowsEditing = true
+//            cameraPicker.sourceType = sourceType
+//            cameraPicker.delegate = self
+//            self.present(cameraPicker, animated: true, completion: nil)
+//        }
+//    }
+//
+//    func doAlbum(){
+//
+//        let sourceType:UIImagePickerController.SourceType = .photoLibrary
+//
+//        // カメラが利用可能かをチェック
+//        if(UIImagePickerController.isSourceTypeAvailable(.photoLibrary)){
+//
+//            let cameraPicker = UIImagePickerController()
+//            cameraPicker.allowsEditing = true
+//            cameraPicker.sourceType = sourceType
+//            cameraPicker.delegate = self
+//            self.present(cameraPicker, animated: true, completion: nil)
+//        }
+//    }
+//
+//    func showAlert(){
+//
+//        let alertController = UIAlertController(title: "選択", message: "どちらを使用しますか", preferredStyle: .actionSheet)
+//
+//        let cameraAction = UIAlertAction(title: "カメラ", style: .default) { (alert) in
+//
+//            self.doCamera()
+//        }
+//
+//        let albumAction = UIAlertAction(title: "アルバム", style: .default) { (alert) in
+//
+//            self.doAlbum()
+//        }
+//
+//        let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel)
+//
+//        alertController.addAction(cameraAction)
+//        alertController.addAction(albumAction)
+//        alertController.addAction(cancelAction)
+//        self.present(alertController, animated: true, completion: nil)
+//    }
+//
+//    // 撮影が完了した時に呼ばれる (アルバムから画像が選択された時に呼ばれる)
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//
+//        if let pickedimage = info[.editedImage] as? UIImage{
+//
+//            memoImageView.image = pickedimage
+//
+//            // 写真の保存
+//            UIImageWriteToSavedPhotosAlbum(pickedimage, self, nil, nil)
+//            picker.dismiss(animated: true, completion: nil)
+//        }
+//    }
+//
+//    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+//
+//        picker.dismiss(animated: true, completion: nil)
+//    }
     
-    func doAlbum(){
-        
-        let sourceType:UIImagePickerController.SourceType = .photoLibrary
-        
-        // カメラが利用可能かをチェック
-        if(UIImagePickerController.isSourceTypeAvailable(.photoLibrary)){
-            
-            let cameraPicker = UIImagePickerController()
-            cameraPicker.allowsEditing = true
-            cameraPicker.sourceType = sourceType
-            cameraPicker.delegate = self
-            self.present(cameraPicker, animated: true, completion: nil)
-        }
-    }
-    
-    func showAlert(){
-        
-        let alertController = UIAlertController(title: "選択", message: "どちらを使用しますか", preferredStyle: .actionSheet)
-        
-        let cameraAction = UIAlertAction(title: "カメラ", style: .default) { (alert) in
-            
-            self.doCamera()
-        }
-        
-        let albumAction = UIAlertAction(title: "アルバム", style: .default) { (alert) in
-            
-            self.doAlbum()
-        }
-        
-        let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel)
-        
-        alertController.addAction(cameraAction)
-        alertController.addAction(albumAction)
-        alertController.addAction(cancelAction)
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
-    // 撮影が完了した時に呼ばれる (アルバムから画像が選択された時に呼ばれる)
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        if let pickedimage = info[.editedImage] as? UIImage{
-            
-            memoImageView.image = pickedimage
-            
-            // 写真の保存
-            UIImageWriteToSavedPhotosAlbum(pickedimage, self, nil, nil)
-            picker.dismiss(animated: true, completion: nil)
-        }
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        
-        picker.dismiss(animated: true, completion: nil)
-    }
     
     @IBAction func backHome(_ sender: Any) {
         

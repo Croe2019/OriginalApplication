@@ -6,6 +6,7 @@ target 'OriginalApplication' do
   use_frameworks!
 
   # Pods for OriginalApplication
+
 pod 'Firebase'
 pod 'Firebase/Database'
 pod 'SVProgressHUD'
@@ -22,7 +23,6 @@ pod 'FacebookLogin'
 pod 'FacebookShare'
 pod 'SDWebImage/WebP'
 pod 'FSCalendar'
-pod 'CalculateCalendarLogic'
-pod 'ImagePicker'
+pod 'DKImagePickerController', '~>3.8.1'
 
 end
