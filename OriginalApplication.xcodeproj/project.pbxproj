@@ -26,6 +26,7 @@
 		FEDE120B24B8896F008FB1CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEDE120A24B8896F008FB1CF /* Main.storyboard */; };
 		FEDE120D24B88B32008FB1CF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDE120C24B88B32008FB1CF /* LoginViewController.swift */; };
 		FEDE120F24B88E09008FB1CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEDE120E24B88E09008FB1CF /* GoogleService-Info.plist */; };
+		FEEB22A32598A86C004CCBD1 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEB22A22598A86C004CCBD1 /* CustomCell.swift */; };
 		FEFD227824C5AD7C006169C9 /* AccountLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFD227724C5AD7C006169C9 /* AccountLogin.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		FEDE120A24B8896F008FB1CF /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FEDE120C24B88B32008FB1CF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FEDE120E24B88E09008FB1CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FEEB22A22598A86C004CCBD1 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		FEFD227724C5AD7C006169C9 /* AccountLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountLogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +124,7 @@
 		FEDE120724B8894D008FB1CF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FEEB22A22598A86C004CCBD1 /* CustomCell.swift */,
 				FEDE120C24B88B32008FB1CF /* LoginViewController.swift */,
 				FE1D5BBE24C469810097B2F1 /* RegisterController.swift */,
 				FE01510D24C473D90046A550 /* HomeController.swift */,
@@ -278,6 +281,7 @@
 				FE9B67C524DC16F200EC2AFF /* Memo.swift in Sources */,
 				FE87C5CE2529E095004FECC1 /* EditViewController.swift in Sources */,
 				FE96862F252ECA7B005FFD8E /* EditSendToDB.swift in Sources */,
+				FEEB22A32598A86C004CCBD1 /* CustomCell.swift in Sources */,
 				FEDE120D24B88B32008FB1CF /* LoginViewController.swift in Sources */,
 				FE6BE6E624CAF8D700F82F7A /* MenuViewController.swift in Sources */,
 				FE0A0DA024EFDE21006BA118 /* LogOut.swift in Sources */,
