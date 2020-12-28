@@ -445,6 +445,9 @@
                                                 </imageView>
                                             </subviews>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="collectionImage" destination="0qK-bW-UUH" id="Mr2-Vd-hUa"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
