@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import FSCalendar
 
 class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     

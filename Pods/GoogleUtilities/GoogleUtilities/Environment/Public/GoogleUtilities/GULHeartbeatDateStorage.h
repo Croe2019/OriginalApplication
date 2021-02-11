@@ -15,7 +15,6 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "GULHeartbeatDateStorage.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

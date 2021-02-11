@@ -14,6 +14,7 @@ import DKImagePickerController
 
 class CreateController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource{
     
+    
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var memoTextView: UITextView!
     @IBOutlet weak var memoImageView: UIImageView!
@@ -25,10 +26,11 @@ class CreateController: UIViewController, UITextFieldDelegate, UIImagePickerCont
     // 画像名を格納する変数
     var memoImageString:String = String()
     // 画像データを格納する変数
-    var memoImageData = Data()
+    var memoImageDataArray = [Data]()
     
     // テストコード 画像を保存する配列
     var selectImageArray = [UIImage]()
+    var indexNumberArray = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,12 +73,20 @@ class CreateController: UIViewController, UITextFieldDelegate, UIImagePickerCont
     @IBAction func PostAction(_ sender: Any) {
         
         let textMemo = Memo(textTitle: titleTextField.text!, textMemoData: memoTextView.text!)
-
         // テキスト、画像の両方を送信
-        if(titleTextField.text != "" && memoTextView.text != "" && memoImageView.image != nil){
-
-            memoImageData = memoImageView.image?.jpegData(compressionQuality: 0.01) as! Data
-            sendToDB.Send(memoTitle: textMemo.GetTextTitle(), memoTextData: textMemo.GetTextMemoData(), memoImageString: memoImageString, memoImageData: memoImageData)
+        // 取得した配列の要素分for文を回す
+        for i in indexNumberArray{
+            
+            print("Controllerのiの値", i)
+            memoImageDataArray.append(selectImageArray[i].jpegData(compressionQuality: 0.01) as! Data)
+        }
+    
+        if(titleTextField.text != "" && memoTextView.text != "" && selectImageArray != nil){
+            
+            print("送信する画像の値", memoImageDataArray)
+            print("作成する画像の値", selectImageArray)
+            sendToDB.Send(memoTitle: textMemo.GetTextTitle(), memoTextData: textMemo.GetTextMemoData(), memoImageString: memoImageString, memoImageDataArray: memoImageDataArray)
+            
         }
         // テキストのみ送信
         else if(titleTextField.text != "" || memoTextView.text != ""){
@@ -84,17 +94,14 @@ class CreateController: UIViewController, UITextFieldDelegate, UIImagePickerCont
             sendToDB.SendText(memoTitle: textMemo.GetTextTitle(), memoTextData: textMemo.GetTextMemoData())
         }
         // 画像のみ送信 画像を圧縮
-        else if(memoImageView.image != nil){
+        else if(selectImageArray != nil){
 
-            memoImageData = memoImageView.image?.jpegData(compressionQuality: 0.01) as! Data
-            sendToDB.SendImage(memoImageData: memoImageData, memoImageString: memoImageString)
+            //memoImageData = memoImageView.image?.jpegData(compressionQuality: 0.01) as! Data
+            sendToDB.SendImage(memoImageDataArray: memoImageDataArray, memoImageString: memoImageString)
         }
     
-        // 画面遷移
-        dismiss(animated: true, completion: nil)
         // 画面遷移 ホーム画面へ戻る
-//        let index = navigationController!.viewControllers.count - 2
-//        navigationController?.popToViewController(navigationController!.viewControllers[index], animated: true)
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }
    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -130,10 +137,14 @@ class CreateController: UIViewController, UITextFieldDelegate, UIImagePickerCont
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        
         // ストーリーボードで設定したID
         let cell:CustomCell = memoCollectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomCell
         cell.collectionImage.image = selectImageArray[indexPath.row]
+        print("画像の値", selectImageArray)
+        // このメソッド内に来ている
+        self.indexNumberArray.append(indexPath.row)
+        //sendToDB.getIndexNumber(indexArray: indexNumberArray)
+        print("indexNumberArrayの値", indexNumberArray)
         
         return cell
     }
@@ -167,7 +178,7 @@ class CreateController: UIViewController, UITextFieldDelegate, UIImagePickerCont
         self.dkImagePickerController.didSelectAssets = {
             [unowned self] (assets: [DKAsset]) in
              
-            //選択された画像はassetsに入れて返却されますのでfetchして取り出すとよいでしょう
+            //選択された画像はassetsに入れて返却されるのでfetchして取り出す
             for asset in assets {
                     asset.fetchFullScreenImage(true, completeBlock: { (image, info) in
                         guard let appendImage = image else{
@@ -217,6 +228,14 @@ class CreateController: UIViewController, UITextFieldDelegate, UIImagePickerCont
             picker.dismiss(animated: true, completion: nil)
         }
     }
+    
+    // アラート
+    func imagePickerControllerDidReachMaxLimit(_ imagePickerController: DKImagePickerController) {
+            let alert = UIAlertController.init(title: "注意", message: "これ以上選択できません!", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil)
+            alert.addAction(okAction)
+            imagePickerController.present(alert, animated: true, completion: nil)
+        }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
 

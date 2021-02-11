@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '14.2'
+# platform :ios, '9.0'
 
 target 'OriginalApplication' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -17,12 +17,8 @@ pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 pod 'SwiftyJSON'
 
-pod 'FacebookSDK'
-pod 'FacebookCore'
-pod 'FacebookLogin'
-pod 'FacebookShare'
 pod 'SDWebImage/WebP'
-pod 'FSCalendar'
 pod 'DKImagePickerController', '~>3.8.1'
+pod 'NXDrawKit'
 
 end
