@@ -19,9 +19,11 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb723068501809517</string>
+				<string>com.googleusercontent.apps.638634722728-sldggesva20tqbbaad9e5s82hgi70ive</string>
 			</array>
 		</dict>
 	</array>

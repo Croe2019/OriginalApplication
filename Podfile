@@ -15,6 +15,7 @@ pod 'Firebase/Core'
 pod 'Firebase/Storage'
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
+pod 'GoogleSignIn'
 pod 'SwiftyJSON'
 
 pod 'SDWebImage/WebP'

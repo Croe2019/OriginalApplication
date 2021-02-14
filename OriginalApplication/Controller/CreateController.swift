@@ -28,6 +28,9 @@ class CreateController: UIViewController, UITextFieldDelegate, UIImagePickerCont
     // 画像データを格納する変数
     var memoImageDataArray = [Data]()
     
+    // テストコード
+    var memoImageData = Data()
+    
     // テストコード 画像を保存する配列
     var selectImageArray = [UIImage]()
     var indexNumberArray = [Int]()
@@ -85,19 +88,20 @@ class CreateController: UIViewController, UITextFieldDelegate, UIImagePickerCont
             
             print("送信する画像の値", memoImageDataArray)
             print("作成する画像の値", selectImageArray)
-            sendToDB.Send(memoTitle: textMemo.GetTextTitle(), memoTextData: textMemo.GetTextMemoData(), memoImageString: memoImageString, memoImageDataArray: memoImageDataArray)
+            //sendToDB.Send(memoTitle: textMemo.GetTextTitle(), memoTextData: textMemo.GetTextMemoData(), memoImageString: memoImageString, memoImageDataArray: memoImageDataArray)
             
         }
         // テキストのみ送信
-        else if(titleTextField.text != "" || memoTextView.text != ""){
+        else if(titleTextField.text != "" && memoTextView.text != ""){
 
             sendToDB.SendText(memoTitle: textMemo.GetTextTitle(), memoTextData: textMemo.GetTextMemoData())
         }
         // 画像のみ送信 画像を圧縮
         else if(selectImageArray != nil){
 
-            //memoImageData = memoImageView.image?.jpegData(compressionQuality: 0.01) as! Data
-            sendToDB.SendImage(memoImageDataArray: memoImageDataArray, memoImageString: memoImageString)
+            // テスト用
+            memoImageData = memoImageView.image?.jpegData(compressionQuality: 0.01) as! Data
+            sendToDB.SendImage(memoImageData: memoImageData, memoImageString: memoImageString)
         }
     
         // 画面遷移 ホーム画面へ戻る
@@ -185,6 +189,8 @@ class CreateController: UIViewController, UITextFieldDelegate, UIImagePickerCont
                             return
                         }
                         self.selectImageArray.append(appendImage)
+                        // テスト用
+                        memoImageView.image = appendImage
                         memoCollectionView.reloadData()
                 })
                 

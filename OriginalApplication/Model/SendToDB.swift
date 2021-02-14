@@ -87,7 +87,7 @@ class SendToDB
     
     
     // 画像形式メモを送信
-    func SendImage(memoImageDataArray:[Data], memoImageString:String){
+    func SendImage(memoImageData:Data, memoImageString:String){
         
         // DBのchildを決める 現在はテキスト形式のみ あとで追加する
         let memoDB = Database.database().reference().child("Record").child(Auth.auth().currentUser!.uid).childByAutoId()
@@ -100,57 +100,57 @@ class SendToDB
         let imageRef = storage.child("MemoImage").child("\(String(describing: imageKey!)).jpeg")
         
         // アップロードタスク putFileの方が良ければそちらに変更
-        //print(memoImageData.debugDescription)
-//        let uploadTask = imageRef.putData(memoImageData, metadata: nil){
-//            (metadata, error) in
-//
-//            if(error != nil){
-//
-//                print(error)
-//                return
-//            }
-//
-//            imageRef.downloadURL { (url, error) in
-//
-//                if(url != nil){
-//
-//                    // 送信するものを指定する
-//                    // 画像だけ送信する場合は、デフォルトでタイトルと本文を文字列で送信する
-//                    // この場合は、後で検索機能実装の為と表示で分かりやすくする為
-//                    let memoInfo = ["memoTitle":"タイトル" as Any, "memoBody":"本文です" as Any,"memoImage":url?.absoluteString as Any]
-//                    memoDB.updateChildValues(memoInfo)
-//                }
-//
-//            }
-//        }
-//
-//        uploadTask.resume()
-        
-        var memoArray = [String]()
-        // アップロードタスク putFileの方が良ければそちらに変更
-        for i in 0...4{
-            
-            let uploadTask = imageRef.putData(memoImageDataArray[i], metadata: nil){
-                (metadata, error) in
-                
-                if(error != nil){
-                    
-                    print(error)
-                    return
+        print(memoImageData.debugDescription)
+        let uploadTask = imageRef.putData(memoImageData, metadata: nil){
+            (metadata, error) in
+
+            if(error != nil){
+
+                print(error)
+                return
+            }
+
+            imageRef.downloadURL { (url, error) in
+
+                if(url != nil){
+
+                    // 送信するものを指定する
+                    // 画像だけ送信する場合は、デフォルトでタイトルと本文を文字列で送信する
+                    // この場合は、後で検索機能実装の為と表示で分かりやすくする為
+                    let memoInfo = ["memoTitle":"タイトル" as Any, "memoBody":"本文です" as Any,"memoImage":url?.absoluteString as Any]
+                    memoDB.updateChildValues(memoInfo)
                 }
-                
-                imageRef.downloadURL { (url, error) in
-                    
-                    if(url != nil){
-                        
-                        memoArray.append(url!.absoluteString)
-                    }
-                    
-                }
+
             }
         }
-        // 送信するものを指定する (最初はテキスト形式のみだが、あとで追加する)
-        let memoInfo = ["memoTitle":"タイトル", "memoBody":"本文", "memoImage":memoArray as Any]
-        memoDB.updateChildValues(memoInfo)
+
+        uploadTask.resume()
+        
+//        var memoArray = [String]()
+//        // アップロードタスク putFileの方が良ければそちらに変更
+//        for i in 0...4{
+//
+//            let uploadTask = imageRef.putData(memoImageDataArray[i], metadata: nil){
+//                (metadata, error) in
+//
+//                if(error != nil){
+//
+//                    print(error)
+//                    return
+//                }
+//
+//                imageRef.downloadURL { (url, error) in
+//
+//                    if(url != nil){
+//
+//                        memoArray.append(url!.absoluteString)
+//                    }
+//
+//                }
+//            }
+//        }
+//        // 送信するものを指定する (最初はテキスト形式のみだが、あとで追加する)
+//        let memoInfo = ["memoTitle":"タイトル", "memoBody":"本文", "memoImage":memoArray as Any]
+//        memoDB.updateChildValues(memoInfo)
     }
 }

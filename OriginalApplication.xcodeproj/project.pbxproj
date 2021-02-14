@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E3F069E9733E11C55044F6D1 /* Pods_OriginalApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313F38053FF634F4090B82F0 /* Pods_OriginalApplication.framework */; };
+		E3F069E9733E11C55044F6D1 /* Pods_OriginalApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313F38053FF634F4090B82F0 /* Pods_OriginalApplication.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		FE01510E24C473D90046A550 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE01510D24C473D90046A550 /* HomeController.swift */; };
 		FE0A0DA024EFDE21006BA118 /* LogOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0A0D9F24EFDE21006BA118 /* LogOut.swift */; };
 		FE1D5BBF24C469810097B2F1 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D5BBE24C469810097B2F1 /* RegisterController.swift */; };
@@ -19,6 +19,7 @@
 		FE9B67C324DC0E3B00EC2AFF /* SendToDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9B67C224DC0E3B00EC2AFF /* SendToDB.swift */; };
 		FE9B67C524DC16F200EC2AFF /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9B67C424DC16F200EC2AFF /* Memo.swift */; };
 		FEB66C2024FBB10F00BCA41F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB66C1F24FBB10F00BCA41F /* DetailViewController.swift */; };
+		FED4B4B625D7C6E4006836C4 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED4B4B525D7C6E4006836C4 /* AuthenticationServices.framework */; };
 		FEDE11F424B8893A008FB1CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDE11F324B8893A008FB1CF /* AppDelegate.swift */; };
 		FEDE11F624B8893A008FB1CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDE11F524B8893A008FB1CF /* SceneDelegate.swift */; };
 		FEDE11FD24B8893C008FB1CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEDE11FC24B8893C008FB1CF /* Assets.xcassets */; };
@@ -46,6 +47,8 @@
 		FE9B67C224DC0E3B00EC2AFF /* SendToDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendToDB.swift; sourceTree = "<group>"; };
 		FE9B67C424DC16F200EC2AFF /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		FEB66C1F24FBB10F00BCA41F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FED4B4B125D7BF42006836C4 /* OriginalApplication.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OriginalApplication.entitlements; sourceTree = "<group>"; };
+		FED4B4B525D7C6E4006836C4 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		FEDE11F024B8893A008FB1CF /* OriginalApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OriginalApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEDE11F324B8893A008FB1CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEDE11F524B8893A008FB1CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FED4B4B625D7C6E4006836C4 /* AuthenticationServices.framework in Frameworks */,
 				E3F069E9733E11C55044F6D1 /* Pods_OriginalApplication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,6 +87,7 @@
 		9570760D1CC08DABF860A9FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FED4B4B525D7C6E4006836C4 /* AuthenticationServices.framework */,
 				313F38053FF634F4090B82F0 /* Pods_OriginalApplication.framework */,
 			);
 			name = Frameworks;
@@ -109,6 +114,7 @@
 		FEDE11F224B8893A008FB1CF /* OriginalApplication */ = {
 			isa = PBXGroup;
 			children = (
+				FED4B4B125D7BF42006836C4 /* OriginalApplication.entitlements */,
 				FEDE120924B88960008FB1CF /* Model */,
 				FEDE120824B88959008FB1CF /* View */,
 				FEDE120724B8894D008FB1CF /* Controller */,
@@ -170,6 +176,7 @@
 				FEDE11ED24B8893A008FB1CF /* Frameworks */,
 				FEDE11EE24B8893A008FB1CF /* Resources */,
 				EDB504B578A0F6E6937CB918 /* [CP] Embed Pods Frameworks */,
+				3ED01EA7762F4E0B62EDF704 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -229,6 +236,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3ED01EA7762F4E0B62EDF704 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OriginalApplication/Pods-OriginalApplication-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OriginalApplication/Pods-OriginalApplication-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OriginalApplication/Pods-OriginalApplication-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EDB504B578A0F6E6937CB918 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -432,6 +456,7 @@
 			baseConfigurationReference = AB5031ADCBFA63F8904D334B /* Pods-OriginalApplication.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OriginalApplication/OriginalApplication.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HD6XYY787U;
 				INFOPLIST_FILE = OriginalApplication/Info.plist;
@@ -452,6 +477,7 @@
 			baseConfigurationReference = 24A3E17CCE7C14DC427BC4D0 /* Pods-OriginalApplication.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OriginalApplication/OriginalApplication.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HD6XYY787U;
 				INFOPLIST_FILE = OriginalApplication/Info.plist;
