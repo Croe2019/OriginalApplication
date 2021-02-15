@@ -329,6 +329,22 @@
             </objects>
             <point key="canvasLocation" x="2669.5999999999999" y="147.97601199400302"/>
         </scene>
+        <!--Hand Written View Controller-->
+        <scene sceneID="2yc-Lb-8Y0">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="inp-5K-Hzj" customClass="HandWrittenViewController" customModule="OriginalApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qHI-jY-C4Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="50j-8z-pa7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ad9-tq-Aix"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="68W-FT-omv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4544.8000000000002" y="-608.54572713643188"/>
+        </scene>
         <!--Menu View Controller-->
         <scene sceneID="gB6-iW-wo8">
             <objects>
@@ -367,6 +383,7 @@
                         <outlet property="menuTableView" destination="3eo-1K-Sfc" id="BLE-oE-cam"/>
                         <outlet property="menuView" destination="bDR-4b-rdm" id="utY-S2-AAI"/>
                         <segue destination="bMo-d5-rw0" kind="show" identifier="create" id="OzN-LF-zcr"/>
+                        <segue destination="inp-5K-Hzj" kind="show" identifier="HandWritten" id="aUO-VH-lqx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5tO-49-1em" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

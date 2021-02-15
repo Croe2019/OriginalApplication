@@ -21,5 +21,6 @@ pod 'SwiftyJSON'
 pod 'SDWebImage/WebP'
 pod 'DKImagePickerController', '~>3.8.1'
 pod 'NXDrawKit'
+pod 'RSKImageCropper'
 
 end

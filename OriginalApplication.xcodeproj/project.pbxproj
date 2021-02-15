@@ -14,6 +14,7 @@
 		FE1D5BC124C46E3A0097B2F1 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D5BC024C46E3A0097B2F1 /* Register.swift */; };
 		FE6BE6E624CAF8D700F82F7A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6BE6E524CAF8D700F82F7A /* MenuViewController.swift */; };
 		FE6E944D24D57D0D00CCD0E2 /* CreateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E944C24D57D0D00CCD0E2 /* CreateController.swift */; };
+		FE71261725DA8D1C00B7C33A /* HandWrittenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE71261625DA8D1C00B7C33A /* HandWrittenViewController.swift */; };
 		FE87C5CE2529E095004FECC1 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87C5CD2529E094004FECC1 /* EditViewController.swift */; };
 		FE96862F252ECA7B005FFD8E /* EditSendToDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE96862E252ECA7B005FFD8E /* EditSendToDB.swift */; };
 		FE9B67C324DC0E3B00EC2AFF /* SendToDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9B67C224DC0E3B00EC2AFF /* SendToDB.swift */; };
@@ -42,6 +43,7 @@
 		FE62EBF124C85E91006964EB /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		FE6BE6E524CAF8D700F82F7A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		FE6E944C24D57D0D00CCD0E2 /* CreateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateController.swift; sourceTree = "<group>"; };
+		FE71261625DA8D1C00B7C33A /* HandWrittenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandWrittenViewController.swift; sourceTree = "<group>"; };
 		FE87C5CD2529E094004FECC1 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		FE96862E252ECA7B005FFD8E /* EditSendToDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSendToDB.swift; sourceTree = "<group>"; };
 		FE9B67C224DC0E3B00EC2AFF /* SendToDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendToDB.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				FE6E944C24D57D0D00CCD0E2 /* CreateController.swift */,
 				FEB66C1F24FBB10F00BCA41F /* DetailViewController.swift */,
 				FE87C5CD2529E094004FECC1 /* EditViewController.swift */,
+				FE71261625DA8D1C00B7C33A /* HandWrittenViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE71261725DA8D1C00B7C33A /* HandWrittenViewController.swift in Sources */,
 				FEFD227824C5AD7C006169C9 /* AccountLogin.swift in Sources */,
 				FE9B67C324DC0E3B00EC2AFF /* SendToDB.swift in Sources */,
 				FE1D5BBF24C469810097B2F1 /* RegisterController.swift in Sources */,
