@@ -13,14 +13,15 @@ import GoogleSignIn
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
+    let logout = LogOut()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
         
         GIDSignIn.sharedInstance()?.clientID = FirebaseApp.app()?.options.clientID
 
+        // ログアウトメソッド呼び出し
+        logout.logout()
         return true
     }
     

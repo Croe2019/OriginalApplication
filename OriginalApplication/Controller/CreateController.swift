@@ -23,6 +23,8 @@ class CreateController: UIViewController, UITextFieldDelegate, UIImagePickerCont
     // テストコード
     let dkImagePickerController = DKImagePickerController()
     let sendToDB = SendToDB()
+    let sendOnlyText = SendOnlyText()
+    let sendOnlyImage = SendOnlyImage()
     // 画像名を格納する変数
     var memoImageString:String = String()
     // 画像データを格納する変数
@@ -75,33 +77,33 @@ class CreateController: UIViewController, UITextFieldDelegate, UIImagePickerCont
     
     @IBAction func PostAction(_ sender: Any) {
         
-        let textMemo = Memo(textTitle: titleTextField.text!, textMemoData: memoTextView.text!)
+        //let textMemo = Memo(textTitle: titleTextField.text!, textMemoData: memoTextView.text!)
         // テキスト、画像の両方を送信
         // 取得した配列の要素分for文を回す
-        for i in indexNumberArray{
-            
-            print("Controllerのiの値", i)
-            memoImageDataArray.append(selectImageArray[i].jpegData(compressionQuality: 0.01) as! Data)
-        }
-    
-        if(titleTextField.text != "" && memoTextView.text != "" && selectImageArray != nil){
-            
-            print("送信する画像の値", memoImageDataArray)
-            print("作成する画像の値", selectImageArray)
-            //sendToDB.Send(memoTitle: textMemo.GetTextTitle(), memoTextData: textMemo.GetTextMemoData(), memoImageString: memoImageString, memoImageDataArray: memoImageDataArray)
-            
-        }
+//        for i in indexNumberArray{
+//
+//            print("Controllerのiの値", i)
+//            memoImageDataArray.append(selectImageArray[i].jpegData(compressionQuality: 0.01) as! Data)
+//        }
+//
+//        if(titleTextField.text != "" && memoTextView.text != "" && selectImageArray != nil){
+//
+//            print("送信する画像の値", memoImageDataArray)
+//            print("作成する画像の値", selectImageArray)
+//            //sendToDB.Send(memoTitle: textMemo.GetTextTitle(), memoTextData: textMemo.GetTextMemoData(), memoImageString: memoImageString, memoImageDataArray: memoImageDataArray)
+//
+//        }
         // テキストのみ送信
-        else if(titleTextField.text != "" && memoTextView.text != ""){
+        if(titleTextField.text != "" && memoTextView.text != ""){
 
-            sendToDB.SendText(memoTitle: textMemo.GetTextTitle(), memoTextData: textMemo.GetTextMemoData())
+            sendOnlyText.SendText(memoTitle: titleTextField.text!, memoTextData: memoTextView.text!)
         }
         // 画像のみ送信 画像を圧縮
         else if(selectImageArray != nil){
 
             // テスト用
             memoImageData = memoImageView.image?.jpegData(compressionQuality: 0.01) as! Data
-            sendToDB.SendImage(memoImageData: memoImageData, memoImageString: memoImageString)
+            sendOnlyImage.SendImage(memoImageData: memoImageData, memoImageString: memoImageString)
         }
     
         // 画面遷移 ホーム画面へ戻る

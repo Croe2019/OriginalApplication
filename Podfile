@@ -7,6 +7,7 @@ target 'OriginalApplication' do
 
   # Pods for OriginalApplication
 
+pod 'Alamofire', '~> 5.2'
 pod 'Firebase'
 pod 'Firebase/Database'
 pod 'SVProgressHUD'
@@ -22,5 +23,6 @@ pod 'SDWebImage/WebP'
 pod 'DKImagePickerController', '~>3.8.1'
 pod 'NXDrawKit'
 pod 'RSKImageCropper'
+pod 'PKHUD', '~> 5.0'
 
 end

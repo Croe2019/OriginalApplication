@@ -10,11 +10,14 @@
 		E3F069E9733E11C55044F6D1 /* Pods_OriginalApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313F38053FF634F4090B82F0 /* Pods_OriginalApplication.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		FE01510E24C473D90046A550 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE01510D24C473D90046A550 /* HomeController.swift */; };
 		FE0A0DA024EFDE21006BA118 /* LogOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0A0D9F24EFDE21006BA118 /* LogOut.swift */; };
+		FE0B5CF025EA4DC000A080CB /* Analysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0B5CEF25EA4DC000A080CB /* Analysis.swift */; };
+		FE0B5CF325EA50A600A080CB /* ScanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0B5CF225EA50A600A080CB /* ScanData.swift */; };
 		FE1D5BBF24C469810097B2F1 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D5BBE24C469810097B2F1 /* RegisterController.swift */; };
 		FE1D5BC124C46E3A0097B2F1 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D5BC024C46E3A0097B2F1 /* Register.swift */; };
 		FE6BE6E624CAF8D700F82F7A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6BE6E524CAF8D700F82F7A /* MenuViewController.swift */; };
 		FE6E944D24D57D0D00CCD0E2 /* CreateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E944C24D57D0D00CCD0E2 /* CreateController.swift */; };
 		FE71261725DA8D1C00B7C33A /* HandWrittenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE71261625DA8D1C00B7C33A /* HandWrittenViewController.swift */; };
+		FE87AD4825E7ADE10030225B /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87AD4725E7ADE10030225B /* ScanViewController.swift */; };
 		FE87C5CE2529E095004FECC1 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87C5CD2529E094004FECC1 /* EditViewController.swift */; };
 		FE96862F252ECA7B005FFD8E /* EditSendToDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE96862E252ECA7B005FFD8E /* EditSendToDB.swift */; };
 		FE9B67C324DC0E3B00EC2AFF /* SendToDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9B67C224DC0E3B00EC2AFF /* SendToDB.swift */; };
@@ -29,6 +32,8 @@
 		FEDE120D24B88B32008FB1CF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDE120C24B88B32008FB1CF /* LoginViewController.swift */; };
 		FEDE120F24B88E09008FB1CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEDE120E24B88E09008FB1CF /* GoogleService-Info.plist */; };
 		FEEB22A32598A86C004CCBD1 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEB22A22598A86C004CCBD1 /* CustomCell.swift */; };
+		FEEFA1F625F0E5BA0060C768 /* SendOnlyText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEFA1F525F0E5BA0060C768 /* SendOnlyText.swift */; };
+		FEEFA1F925F0E5F40060C768 /* SendOnlyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEFA1F825F0E5F40060C768 /* SendOnlyImage.swift */; };
 		FEFD227824C5AD7C006169C9 /* AccountLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFD227724C5AD7C006169C9 /* AccountLogin.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,12 +43,15 @@
 		AB5031ADCBFA63F8904D334B /* Pods-OriginalApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OriginalApplication.debug.xcconfig"; path = "Target Support Files/Pods-OriginalApplication/Pods-OriginalApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		FE01510D24C473D90046A550 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		FE0A0D9F24EFDE21006BA118 /* LogOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOut.swift; sourceTree = "<group>"; };
+		FE0B5CEF25EA4DC000A080CB /* Analysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analysis.swift; sourceTree = "<group>"; };
+		FE0B5CF225EA50A600A080CB /* ScanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanData.swift; sourceTree = "<group>"; };
 		FE1D5BBE24C469810097B2F1 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		FE1D5BC024C46E3A0097B2F1 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		FE62EBF124C85E91006964EB /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		FE6BE6E524CAF8D700F82F7A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		FE6E944C24D57D0D00CCD0E2 /* CreateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateController.swift; sourceTree = "<group>"; };
 		FE71261625DA8D1C00B7C33A /* HandWrittenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandWrittenViewController.swift; sourceTree = "<group>"; };
+		FE87AD4725E7ADE10030225B /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		FE87C5CD2529E094004FECC1 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		FE96862E252ECA7B005FFD8E /* EditSendToDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSendToDB.swift; sourceTree = "<group>"; };
 		FE9B67C224DC0E3B00EC2AFF /* SendToDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendToDB.swift; sourceTree = "<group>"; };
@@ -61,6 +69,8 @@
 		FEDE120C24B88B32008FB1CF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FEDE120E24B88E09008FB1CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FEEB22A22598A86C004CCBD1 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		FEEFA1F525F0E5BA0060C768 /* SendOnlyText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendOnlyText.swift; sourceTree = "<group>"; };
+		FEEFA1F825F0E5F40060C768 /* SendOnlyImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendOnlyImage.swift; sourceTree = "<group>"; };
 		FEFD227724C5AD7C006169C9 /* AccountLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountLogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +151,7 @@
 				FEB66C1F24FBB10F00BCA41F /* DetailViewController.swift */,
 				FE87C5CD2529E094004FECC1 /* EditViewController.swift */,
 				FE71261625DA8D1C00B7C33A /* HandWrittenViewController.swift */,
+				FE87AD4725E7ADE10030225B /* ScanViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -163,6 +174,10 @@
 				FE9B67C424DC16F200EC2AFF /* Memo.swift */,
 				FE0A0D9F24EFDE21006BA118 /* LogOut.swift */,
 				FE96862E252ECA7B005FFD8E /* EditSendToDB.swift */,
+				FE0B5CEF25EA4DC000A080CB /* Analysis.swift */,
+				FE0B5CF225EA50A600A080CB /* ScanData.swift */,
+				FEEFA1F525F0E5BA0060C768 /* SendOnlyText.swift */,
+				FEEFA1F825F0E5F40060C768 /* SendOnlyImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -306,12 +321,16 @@
 				FEFD227824C5AD7C006169C9 /* AccountLogin.swift in Sources */,
 				FE9B67C324DC0E3B00EC2AFF /* SendToDB.swift in Sources */,
 				FE1D5BBF24C469810097B2F1 /* RegisterController.swift in Sources */,
+				FE0B5CF325EA50A600A080CB /* ScanData.swift in Sources */,
 				FE9B67C524DC16F200EC2AFF /* Memo.swift in Sources */,
 				FE87C5CE2529E095004FECC1 /* EditViewController.swift in Sources */,
+				FE0B5CF025EA4DC000A080CB /* Analysis.swift in Sources */,
 				FE96862F252ECA7B005FFD8E /* EditSendToDB.swift in Sources */,
 				FEEB22A32598A86C004CCBD1 /* CustomCell.swift in Sources */,
 				FEDE120D24B88B32008FB1CF /* LoginViewController.swift in Sources */,
 				FE6BE6E624CAF8D700F82F7A /* MenuViewController.swift in Sources */,
+				FEEFA1F625F0E5BA0060C768 /* SendOnlyText.swift in Sources */,
+				FEEFA1F925F0E5F40060C768 /* SendOnlyImage.swift in Sources */,
 				FE0A0DA024EFDE21006BA118 /* LogOut.swift in Sources */,
 				FE6E944D24D57D0D00CCD0E2 /* CreateController.swift in Sources */,
 				FE01510E24C473D90046A550 /* HomeController.swift in Sources */,
@@ -319,6 +338,7 @@
 				FEDE11F624B8893A008FB1CF /* SceneDelegate.swift in Sources */,
 				FE1D5BC124C46E3A0097B2F1 /* Register.swift in Sources */,
 				FEB66C2024FBB10F00BCA41F /* DetailViewController.swift in Sources */,
+				FE87AD4825E7ADE10030225B /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

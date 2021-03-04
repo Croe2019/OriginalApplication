@@ -61,7 +61,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kLK-XD-Bs0" customClass="GIDSignInButton">
-                                <rect key="frame" x="76" y="112" width="222" height="104"/>
+                                <rect key="frame" x="76" y="112" width="222" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
@@ -329,6 +329,55 @@
             </objects>
             <point key="canvasLocation" x="2669.5999999999999" y="147.97601199400302"/>
         </scene>
+        <!--Scan View Controller-->
+        <scene sceneID="OYD-hZ-ioW">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="QVC-2H-aJt" customClass="ScanViewController" customModule="OriginalApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Sf-6a-S5Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qFZ-D1-i3M">
+                                <rect key="frame" x="0.0" y="54" width="375" height="293"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADU-2a-i0U">
+                                <rect key="frame" x="16" y="515" width="319" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFd-kx-5aa">
+                                <rect key="frame" x="284" y="12" width="66" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="camera" catalog="system"/>
+                                <connections>
+                                    <action selector="selectScan:" destination="QVC-2H-aJt" eventType="touchUpInside" id="fIb-KX-rZU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUK-3c-Wfh">
+                                <rect key="frame" x="288" y="407" width="47" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <action selector="analytics:" destination="QVC-2H-aJt" eventType="touchUpInside" id="tfG-2m-JXR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="A3S-L8-vOk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0kB-qI-TQF"/>
+                    <connections>
+                        <outlet property="scanImag" destination="qFZ-D1-i3M" id="fFe-4q-Wgf"/>
+                        <outlet property="scanText" destination="ADU-2a-i0U" id="ml9-nh-woM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WXB-GW-Z7P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3692" y="-641.82908545727139"/>
+        </scene>
         <!--Hand Written View Controller-->
         <scene sceneID="2yc-Lb-8Y0">
             <objects>
@@ -384,6 +433,7 @@
                         <outlet property="menuView" destination="bDR-4b-rdm" id="utY-S2-AAI"/>
                         <segue destination="bMo-d5-rw0" kind="show" identifier="create" id="OzN-LF-zcr"/>
                         <segue destination="inp-5K-Hzj" kind="show" identifier="HandWritten" id="aUO-VH-lqx"/>
+                        <segue destination="QVC-2H-aJt" kind="show" identifier="Scan" id="oxE-8X-aJH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5tO-49-1em" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -494,7 +544,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9vT-iC-Vpp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4544.8000000000002" y="144.3778110944528"/>
+            <point key="canvasLocation" x="4777" y="148"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="f9s-Zt-fgr">
@@ -522,6 +572,7 @@
         <image name="MenuImage" width="44" height="44"/>
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
