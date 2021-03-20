@@ -1,18 +1,16 @@
 //
-//  EditSendToDB.swift
+//  SendToTrashBox.swift
 //  OriginalApplication
 //
-//  Created by 濱田広毅 on 2020/10/08.
-//  Copyright © 2020 濱田広毅. All rights reserved.
+//  Created by 濱田広毅 on 2021/03/05.
+//  Copyright © 2021 濱田広毅. All rights reserved.
 //
 
 import Foundation
 import Firebase
 import FirebaseAuth
-import UIKit
 
-// 編集したメモを送信するクラス ※一旦保留 編集したいメモのIDがController側で保持しているため
-class EditSendToDB{
+class SendToTrashBox{
     
     // テストコード
     var indexNumber = Int()
@@ -20,7 +18,7 @@ class EditSendToDB{
     var autoIDArray = [String]()
     var testArray = [String]()
     
-    // データを格納
+    // ゴミ箱に送りたいデータを格納
     func storingToArray(){
         
         let ref = Database.database().reference().child("Record").child(Auth.auth().currentUser!.uid).queryLimited(toLast: 100).observe(.value) { (snapShot) in
@@ -38,11 +36,11 @@ class EditSendToDB{
         }
     }
     
-    // テキスト形式のメモを送信
-    func EditSend(editMemoTitle:String, editMemoBody:String, editMemoImageString:String, editMemoImageData:Data){
+    // ゴミ箱に送る
+    func TrashSend(editMemoTitle:String, editMemoBody:String, editMemoImageString:String, editMemoImageData:Data, indexNumber:String){
         
         // refの中身が間違っているのか？
-        let ref = Database.database().reference().child("Record").child(Auth.auth().currentUser!.uid)
+        let ref = Database.database().reference().child("TrashBox").child(Auth.auth().currentUser!.uid)
         // 条件が間違っているのか？
         
         for autoID in autoIDArray{
@@ -73,5 +71,4 @@ class EditSendToDB{
             
         }
     }
-    
 }

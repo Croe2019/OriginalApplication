@@ -52,7 +52,5 @@ class SendOnlyImage{
         }
 
         uploadTask.resume()
-        
-
     }
 }

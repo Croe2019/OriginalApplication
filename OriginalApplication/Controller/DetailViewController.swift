@@ -19,9 +19,11 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     var memoTextTitleString = String()
     var memoTextBodyString = String()
     var memoImageString = String()
+    var memoImageData = Data()
     // テストコード データのautoIDの番号を取得する変数
     var indexNumber = Int()
     var memoArray = [Memo]()
+   // let dataDelete = DataDelete()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,8 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         memoTitle.text = memoTextTitleString
         memoTextBody.text = memoTextBodyString
         memoImageView.sd_setImage(with: URL(string:memoImageString), completed: nil)
+        // テスト
+        print("indexNumber", indexNumber)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -58,6 +62,43 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         return cell
     }
     
+//    func sendTrashBox(){
+//
+//        let textMemo = Memo(textTitle: memoTitle.text!, textMemoData: memoTextBody.text!)
+//        // DBのchildを決める 現在はテキスト形式のみ あとで追加する
+//        let memoDB = Database.database().reference().child("TrashBox").child(Auth.auth().currentUser!.uid).childByAutoId()
+//
+//        // 送信先のStorageURL
+//        let storage = Storage.storage().reference(forURL: "gs://originalapplication-f9c27.appspot.com")
+//
+//        let imageKey = memoDB.child("MemoImage").childByAutoId().key
+//
+//        let imageRef = storage.child("MemoImage").child("\(String(describing: imageKey!)).jpeg")
+//        memoImageData = memoImageView.image?.jpegData(compressionQuality: 0.01) as! Data
+//
+//        // アップロードタスク putFileの方が良ければそちらに変更
+//        let uploadTask = imageRef.putData(memoImageData, metadata: nil){
+//            (metadata, error) in
+//
+//            if(error != nil){
+//
+//                print(error)
+//                return
+//            }
+//
+//            imageRef.downloadURL { (url, error) in
+//
+//                if(url != nil){
+//
+//                    // 送信するものを指定する
+//                    // 画像だけ送信する場合は、デフォルトでタイトルと本文を文字列で送信する
+//                    // この場合は、後で検索機能実装の為と表示で分かりやすくする為
+//                    let memoInfo = ["memoTitle":textMemo.GetTextTitle() as Any, "memoBody":textMemo.GetTextMemoData() as Any,"memoImage":url?.absoluteString as Any]
+//                    memoDB.updateChildValues(memoInfo)
+//                }
+//            }
+//        }
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

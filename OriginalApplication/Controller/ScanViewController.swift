@@ -39,9 +39,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             
             scanImageData = scanImag.image?.jpegData(compressionQuality: 0.01) as! Data
             var googleURL = "https://vision.googleapis.com/v1/images:annotate?key=\(apiKey)"
-            let analytics = Analysis(imageData: scanImageData, scanTextString: scanText.text!, urlString: googleURL)
-            analytics.doneCatchProtocol = self
-            analytics.setData()
+            
         }
     }
     

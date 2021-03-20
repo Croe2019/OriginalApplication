@@ -95,13 +95,11 @@ class EditViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
     func upDate(){
 
         let textMemo = Memo(textTitle: editTitleTextField.text!, textMemoData: editMemoBodyView.text!)
-        
         let ref = Database.database().reference().child("Record").child(Auth.auth().currentUser!.uid)
         
         for autoID in autoIDArray{
             
             testArray.append(autoID)
-            
         }
         
         let storage = Storage.storage().reference(forURL: "gs://originalapplication-f9c27.appspot.com")
@@ -126,6 +124,7 @@ class EditViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
             
         }
     }
+    
     
     @IBAction func doCamera(_ sender: Any) {
         showAlert()

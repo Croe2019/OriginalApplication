@@ -14,6 +14,7 @@
 		FE0B5CF325EA50A600A080CB /* ScanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0B5CF225EA50A600A080CB /* ScanData.swift */; };
 		FE1D5BBF24C469810097B2F1 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D5BBE24C469810097B2F1 /* RegisterController.swift */; };
 		FE1D5BC124C46E3A0097B2F1 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D5BC024C46E3A0097B2F1 /* Register.swift */; };
+		FE24D0E925F345A0005D665B /* DataDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE24D0E825F345A0005D665B /* DataDelete.swift */; };
 		FE6BE6E624CAF8D700F82F7A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6BE6E524CAF8D700F82F7A /* MenuViewController.swift */; };
 		FE6E944D24D57D0D00CCD0E2 /* CreateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E944C24D57D0D00CCD0E2 /* CreateController.swift */; };
 		FE71261725DA8D1C00B7C33A /* HandWrittenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE71261625DA8D1C00B7C33A /* HandWrittenViewController.swift */; };
@@ -47,6 +48,7 @@
 		FE0B5CF225EA50A600A080CB /* ScanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanData.swift; sourceTree = "<group>"; };
 		FE1D5BBE24C469810097B2F1 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		FE1D5BC024C46E3A0097B2F1 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		FE24D0E825F345A0005D665B /* DataDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDelete.swift; sourceTree = "<group>"; };
 		FE62EBF124C85E91006964EB /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		FE6BE6E524CAF8D700F82F7A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		FE6E944C24D57D0D00CCD0E2 /* CreateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateController.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				FE0B5CF225EA50A600A080CB /* ScanData.swift */,
 				FEEFA1F525F0E5BA0060C768 /* SendOnlyText.swift */,
 				FEEFA1F825F0E5F40060C768 /* SendOnlyImage.swift */,
+				FE24D0E825F345A0005D665B /* DataDelete.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				FEEFA1F625F0E5BA0060C768 /* SendOnlyText.swift in Sources */,
 				FEEFA1F925F0E5F40060C768 /* SendOnlyImage.swift in Sources */,
 				FE0A0DA024EFDE21006BA118 /* LogOut.swift in Sources */,
+				FE24D0E925F345A0005D665B /* DataDelete.swift in Sources */,
 				FE6E944D24D57D0D00CCD0E2 /* CreateController.swift in Sources */,
 				FE01510E24C473D90046A550 /* HomeController.swift in Sources */,
 				FEDE11F424B8893A008FB1CF /* AppDelegate.swift in Sources */,

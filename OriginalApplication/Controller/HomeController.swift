@@ -17,6 +17,7 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var memoArray = [Memo]()
     // 検索結果を格納する配列
     var searchResult = [Memo]()
+    let dataDelete = DataDelete()
     
     var memoTitle = String()
     var memoTextBody = String()
@@ -36,8 +37,9 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         memoTableView.delegate = self
         memoTableView.dataSource = self
         searchField.delegate = self
-        
+        memoTableView.allowsMultipleSelectionDuringEditing = true
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -49,7 +51,7 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             if let user = user?.uid{
                 
-                let ref = Database.database().reference().child("Record").child(Auth.auth().currentUser!.uid).queryLimited(toLast: 100).observe(.value) { (snapShot) in
+                let ref = Database.database().reference().child("Record").child(Auth.auth().currentUser!.uid).queryLimited(toFirst: 100).observe(.value) { (snapShot) in
                     
                     if let snapShot = snapShot.children.allObjects as? [DataSnapshot]{
                         
@@ -73,11 +75,51 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     }
                     
                 }
+            }
+        }
+    }
+    
+    // データを格納
+    func storingToArray(){
+        
+        // 配列を初期化
+        autoIDArray = []
+        let ref = Database.database().reference().child("Record").child(Auth.auth().currentUser!.uid).queryLimited(toFirst: 100).observe(.value) { (snapShot) in
+            
+            if let snapShot = snapShot.children.allObjects as? [DataSnapshot]{
                 
+                for snap in snapShot{
+                    
+                    // autoIDを追加
+                    self.autoIDArray.append(snap.key)
+                }
+        
             }
             
         }
+    }
+ 
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
+        storingToArray()
+        // 削除のアクションを設定する
+        let deleteAction = UIContextualAction(style: .destructive, title:"delete") {
+            (ctxAction, view, completionHandler) in
+            self.indexNumber = indexPath.row
+            self.dataDelete.dataDelete(autoIDArray: self.autoIDArray, indexNumber: self.indexNumber)
+            self.memoTableView.reloadData()
+            completionHandler(true)
+        }
+        // 削除ボタンのデザインを設定する
+        let trashImage = UIImage(systemName: "trash.fill")?.withTintColor(UIColor.white , renderingMode: .alwaysTemplate)
+        deleteAction.image = trashImage
+        deleteAction.backgroundColor = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1)
+        
+        // スワイプでの削除を無効化して設定する
+        let swipeAction = UISwipeActionsConfiguration(actions:[deleteAction])
+        swipeAction.performsFirstActionWithFullSwipe = false
+        
+        return swipeAction
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -198,7 +240,7 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         performSegue(withIdentifier: "Detail", sender: nil)
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         // 複数の画面遷移をする為、エラー防止

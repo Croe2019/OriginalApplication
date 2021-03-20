@@ -26,38 +26,12 @@ class Analysis{
     
     init(imageData:Data, scanTextString:String, urlString:String){
         
-        self.imageData = imageData
-        self.scanTextString = scanTextString
-        self.urlString = urlString
     }
     
     // JSON解析を行う
     public func setData(){
         
-        // urlエンコーディング
-        let encordURLString:String = scanTextString!.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        AF.request(encordURLString, method: .post, parameters: nil, encoding: JSONEncoding.default).responseJSON { (response) in
-            
-            print("responseの値", response.debugDescription)
-            
-            switch response.result{
-            
-            case .success:
-                do{
-                    let json:JSON = try JSON(data: response.data!)
-                    
-                    let scanData = ScanData(imageData: json["requests"]["image"]["content"].string, scanTextString: json["requests"]["features"]["type"]["DOCUMENT_TEXT_DETECT"].string)
-                    
-                    self.doneCatchProtocol?.catchData(scanTextString: self.scanTextString!)
-                }catch{
-                    print("エラーです")
-                }
-                break
-            case .failure:
-                break
-            }
-        }
+        
     }
     
-    // その値をControllerに渡す
 }
