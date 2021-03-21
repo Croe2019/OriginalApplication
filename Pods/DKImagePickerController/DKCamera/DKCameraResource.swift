@@ -1,19 +1,3 @@
-//
-//  DKCameraResource.swift
-//  DKCameraDemo
-//
-//  Created by Michal Tomaszewski on 15.03.2017.
-//  Copyright © 2017 ZhangAo. All rights reserved.
-//
-
-import Foundation
-import UIKit
-
-public protocol DKCameraResource {
-   
-     func cameraCancelImage() -> UIImage
-     func cameraFlashOnImage() -> UIImage
-     func cameraFlashAutoImage() -> UIImage
-     func cameraFlashOffImage() -> UIImage
-     func cameraSwitchImage() -> UIImage
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b645ce7a9619436aa7587f9cf732dd887ccabc9bc8261f9fa61e815ffaa082f2
+size 439

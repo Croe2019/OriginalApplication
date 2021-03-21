@@ -1,31 +1,3 @@
-//
-//  GitHub
-//  https://github.com/zhangao0086/DKImagePickerController
-//
-//
-//  License
-//  Copyright (c) 2014 ZhangAo
-//  Released under an MIT license: http://opensource.org/licenses/MIT
-//
-
-"select" = "Tilføj(%@)";
-
-"permissionCamera" = "Tillad venligst adgang til kameraet";
-
-"permissionPhoto" = "Tillad venilgst adgang til fotos";
-
-"permit" = "Tillad adgang";
-
-"gotoSettings" = "Gå til 「Indstillinger」for at give adgang";
-
-"ok" = "OK";
-
-"selectPhotosOrVideos" = "Tilføj fotos eller videoer";
-
-"selectPhotosOrVideosError" = "Det er ikke muligt at tilføje fotos og videoer på samme tid";
-
-"done" = "Udfør";
-
-"maxLimitReached" = "Grænsen for antal billeder er nået";
-
-"maxLimitReachedMessage" = "Du kan maksimalt tilføje %@ billeder";
+version https://git-lfs.github.com/spec/v1
+oid sha256:99037ba4c47f4bff43f36c5f1733d5e81b96aaa4c19c0bd0a007b458aa3bbcb4
+size 753

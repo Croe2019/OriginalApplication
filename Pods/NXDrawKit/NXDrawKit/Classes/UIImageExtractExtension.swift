@@ -1,36 +1,3 @@
-//
-//  UIImageExtractExtension.swift
-//  Pods
-//
-//  Created by Nicejinux on 2016. 8. 6..
-//
-//
-
-import UIKit
-
-
-public extension UIImage {
-    @objc func asPNGData() -> Data? {
-        return self.pngData()
-    }
-    
-    @objc func asJPEGData(_ quality: CGFloat) -> Data? {
-        return self.jpegData(compressionQuality: quality);
-    }
-    
-    @objc func asPNGImage() -> UIImage? {
-        if let data = self.asPNGData() {
-            return UIImage(data: data)
-        }
-        
-        return nil
-    }
-    
-    @objc func asJPGImage(_ quality: CGFloat) -> UIImage? {
-        if let data = self.asJPEGData(quality) {
-            return UIImage(data: data)
-        }
-        
-        return nil
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:da242e280101d5eec5a1a36f730f4d3dd13c1330cc24e8b3de6fadf6efe21eb7
+size 710

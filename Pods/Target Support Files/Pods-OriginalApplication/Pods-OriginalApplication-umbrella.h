@@ -1,16 +1,3 @@
-#ifdef __OBJC__
-#import <UIKit/UIKit.h>
-#else
-#ifndef FOUNDATION_EXPORT
-#if defined(__cplusplus)
-#define FOUNDATION_EXPORT extern "C"
-#else
-#define FOUNDATION_EXPORT extern
-#endif
-#endif
-#endif
-
-
-FOUNDATION_EXPORT double Pods_OriginalApplicationVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_OriginalApplicationVersionString[];
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:d8050a5efbd5e639bfb3845906f5b3b70ec7bc8a4493a7ada2433ad45f6b4cba
+size 340

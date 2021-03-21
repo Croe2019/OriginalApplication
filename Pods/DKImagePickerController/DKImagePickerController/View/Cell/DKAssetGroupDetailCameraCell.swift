@@ -1,33 +1,3 @@
-//
-//  DKAssetGroupDetailCameraCell.swift
-//  DKImagePickerController
-//
-//  Created by ZhangAo on 07/12/2016.
-//  Copyright © 2016 ZhangAo. All rights reserved.
-//
-
-import UIKit
-
-class DKAssetGroupDetailCameraCell: DKAssetGroupDetailBaseCell {
-    
-    class override func cellReuseIdentifier() -> String {
-        return "DKImageCameraIdentifier"
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        let cameraImageView = UIImageView(frame: self.bounds)
-        cameraImageView.contentMode = .center
-        cameraImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        cameraImageView.image = DKImageResource.cameraImage()
-        self.contentView.addSubview(cameraImageView)
-        
-        self.contentView.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-} /* DKAssetGroupDetailCameraCell */
+version https://git-lfs.github.com/spec/v1
+oid sha256:b8d5445d5d786675a0a8005ab2857cc9cd402d8aae02c486823d3b0990785b90
+size 987

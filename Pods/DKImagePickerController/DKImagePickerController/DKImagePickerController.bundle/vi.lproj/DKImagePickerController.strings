@@ -1,31 +1,3 @@
-//
-//  GitHub
-//  https://github.com/zhangao0086/DKImagePickerController
-//
-//
-//  License
-//  Copyright (c) 2014 ZhangAo
-//  Released under an MIT license: http://opensource.org/licenses/MIT
-//
-
-"select" = "Chọn(%@)";
-
-"permissionCamera" = "Vui lòng cho phép truy cập camera";
-
-"permissionPhoto" = "Vui lòng cho phép truy cập ảnh";
-
-"permit" = "Cho phép truy cập";
-
-"gotoSettings" = "Mở 「Cài đặt」 để cho phép truy cập";
-
-"ok" = "Đồng ý";
-
-"selectPhotosOrVideos" = "Chọn ảnh hoặc video";
-
-"selectPhotosOrVideosError" = "Không thể lựa chọn đồng thời cả ảnh và video.";
-
-"done" = "Xong";
-
-"maxLimitReached" = "Số lượng ảnh đã đạt giới hạn";
-
-"maxLimitReachedMessage" = "Bạn có thể chọn %@ mục";
+version https://git-lfs.github.com/spec/v1
+oid sha256:704913410acd7f7b02c10a2d6a7b4beed8c4a87ac4463ec012d95e1f2b2e71db
+size 776

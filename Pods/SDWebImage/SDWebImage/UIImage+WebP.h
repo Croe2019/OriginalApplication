@@ -1,30 +1,3 @@
-/*
- * This file is part of the SDWebImage package.
- * (c) Olivier Poitrey <rs@dailymotion.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
-#ifdef SD_WEBP
-
-#import "SDWebImageCompat.h"
-
-@interface UIImage (WebP)
-
-/**
- * Get the current WebP image loop count, the default value is 0.
- * For static WebP image, the value is 0.
- * For animated WebP image, 0 means repeat the animation indefinitely.
- * Note that because of the limitations of categories this property can get out of sync
- * if you create another instance with CGImage or other methods.
- * @return WebP image loop count
- * @deprecated use `sd_imageLoopCount` instead.
- */
-- (NSInteger)sd_webpLoopCount __deprecated_msg("Method deprecated. Use `sd_imageLoopCount` in `UIImage+MultiFormat.h`");
-
-+ (nullable UIImage *)sd_imageWithWebPData:(nullable NSData *)data;
-
-@end
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:7da3b2d005a873b57a5b02f2e369e3b9533463c6b07a64878db648f5862beb4f
+size 928

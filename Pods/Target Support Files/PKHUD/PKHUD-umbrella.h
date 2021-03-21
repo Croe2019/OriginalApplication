@@ -1,17 +1,3 @@
-#ifdef __OBJC__
-#import <UIKit/UIKit.h>
-#else
-#ifndef FOUNDATION_EXPORT
-#if defined(__cplusplus)
-#define FOUNDATION_EXPORT extern "C"
-#else
-#define FOUNDATION_EXPORT extern
-#endif
-#endif
-#endif
-
-#import "PKHUD.h"
-
-FOUNDATION_EXPORT double PKHUDVersionNumber;
-FOUNDATION_EXPORT const unsigned char PKHUDVersionString[];
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:1238e0d88b9f72401cd17af8fd720fff51571b766a73904c34bb9d41d1205d64
+size 320

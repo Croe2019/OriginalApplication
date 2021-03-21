@@ -1,25 +1,3 @@
-//
-//  LogOut.swift
-//  OriginalApplication
-//
-//  Created by 濱田広毅 on 2020/08/21.
-//  Copyright © 2020 濱田広毅. All rights reserved.
-//
-
-import Foundation
-import Firebase
-
-// ログアウトクラス
-class LogOut{
-    
-    func logout(){
-        
-        let firebaseAuth = Auth.auth()
-        
-        do{
-            try Auth.auth().signOut()
-        }catch let signOutError as NSError{
-            print("Error signing out: %@", signOutError)
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b899c3c4af952411e733879784bfeb149ee932751e7b9d00fcd8f75aee8f9e18
+size 478

@@ -1,15 +1,3 @@
-/*
- * This file is part of the SDWebImage package.
- * (c) Olivier Poitrey <rs@dailymotion.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
-#import <Foundation/Foundation.h>
-
-@protocol SDWebImageOperation <NSObject>
-
-- (void)cancel;
-
-@end
+version https://git-lfs.github.com/spec/v1
+oid sha256:c374c8767ef44c1543166894ddc4a74c6bdf0861864887d2a3fe1ceb330e301d
+size 329

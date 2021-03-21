@@ -1,18 +1,3 @@
-AM_CPPFLAGS += -I$(top_builddir) -I$(top_srcdir)
-lib_LTLIBRARIES = libwebpdemux.la
-
-libwebpdemux_la_SOURCES =
-libwebpdemux_la_SOURCES += anim_decode.c demux.c
-
-libwebpdemuxinclude_HEADERS =
-libwebpdemuxinclude_HEADERS += ../webp/decode.h
-libwebpdemuxinclude_HEADERS += ../webp/demux.h
-libwebpdemuxinclude_HEADERS += ../webp/mux_types.h
-libwebpdemuxinclude_HEADERS += ../webp/types.h
-noinst_HEADERS =
-noinst_HEADERS += ../webp/format_constants.h
-
-libwebpdemux_la_LIBADD = ../libwebp.la
-libwebpdemux_la_LDFLAGS = -no-undefined -version-info 2:7:0
-libwebpdemuxincludedir = $(includedir)/webp
-pkgconfig_DATA = libwebpdemux.pc
+version https://git-lfs.github.com/spec/v1
+oid sha256:6c87ed3f47b3557a4af3eb55f348abf9644f3d7a3c39178f25ea9a2b4c5764e4
+size 622

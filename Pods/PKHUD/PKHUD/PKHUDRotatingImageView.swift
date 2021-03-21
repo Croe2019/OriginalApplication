@@ -1,22 +1,3 @@
-//
-//  PKHUDRotatingImageView.swift
-//  PKHUD
-//
-//  Created by Mark Koh on 1/14/16.
-//  Copyright © 2016 NSExceptional. All rights reserved.
-//  Licensed under the MIT license.
-//
-
-import UIKit
-import QuartzCore
-
-/// PKHUDRotatingImageView provides a content view that rotates the supplied image automatically.
-open class PKHUDRotatingImageView: PKHUDSquareBaseView, PKHUDAnimating {
-
-    public func startAnimation() {
-        imageView.layer.add(PKHUDAnimation.continuousRotation, forKey: "progressAnimation")
-    }
-
-    public func stopAnimation() {
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6a8e0cc523218012cc33040b8d94cd9c3ad5f144e221806ed88bb2915d2a03cf
+size 563

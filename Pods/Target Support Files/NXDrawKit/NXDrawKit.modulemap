@@ -1,6 +1,3 @@
-framework module NXDrawKit {
-  umbrella header "NXDrawKit-umbrella.h"
-
-  export *
-  module * { export * }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2c6a8f8b45d800126a9c41f047f76954f122a0a11317614d202d2642cc5a4a11
+size 108

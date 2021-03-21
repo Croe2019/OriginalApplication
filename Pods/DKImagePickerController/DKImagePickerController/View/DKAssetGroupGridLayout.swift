@@ -1,36 +1,3 @@
-//
-//  DKAssetGroupGridLayout.swift
-//  DKImagePickerControllerDemo
-//
-//  Created by ZhangAo on 16/1/17.
-//  Copyright © 2016年 ZhangAo. All rights reserved.
-//
-
-import UIKit
-
-open class DKAssetGroupGridLayout: UICollectionViewFlowLayout {
-	
-	open override func prepare() {
-		super.prepare()
-		
-		var minItemWidth: CGFloat = 80
-		if UI_USER_INTERFACE_IDIOM() == .pad {
-			minItemWidth = 100
-		}
-		
-		let interval: CGFloat = 1
-		self.minimumInteritemSpacing = interval
-		self.minimumLineSpacing = interval
-		
-		let contentWidth = self.collectionView!.bounds.width
-		
-		let itemCount = Int(floor(contentWidth / minItemWidth))
-		var itemWidth = (contentWidth - interval * (CGFloat(itemCount) - 1)) / CGFloat(itemCount)
-		let actualInterval = (contentWidth - CGFloat(itemCount) * itemWidth) / (CGFloat(itemCount) - 1)
-		itemWidth += actualInterval - interval
-		
-		let itemSize = CGSize(width: itemWidth, height: itemWidth)
-		self.itemSize = itemSize
-	}
-	
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0c0b2a2a4538cfa740c7696d09b7c6915977dacd610b6044cdaaff49f10b389c
+size 956

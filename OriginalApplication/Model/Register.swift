@@ -1,32 +1,3 @@
-//
-//  Register.swift
-//  OriginalApplication
-//
-//  Created by 濱田広毅 on 2020/07/19.
-//  Copyright © 2020 濱田広毅. All rights reserved.
-//
-
-import Foundation
-import Firebase
-
-class Register
-{
-    
-    
-    func Register(email:String, password:String)
-    {
-        
-        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
-            
-            if(error != nil)
-            {
-                print(error as Any)
-            }
-            else
-            {
-                print("ユーザーの作成が成功しました")
-                
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:533c886007236625ec86be70c5282e6244b13ee32016a5620152c7c838d02cee
+size 621

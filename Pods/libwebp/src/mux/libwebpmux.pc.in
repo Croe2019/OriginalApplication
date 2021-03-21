@@ -1,12 +1,3 @@
-prefix=@prefix@
-exec_prefix=@exec_prefix@
-libdir=@libdir@
-includedir=@includedir@
-
-Name: libwebpmux
-Description: Library for manipulating the WebP graphics format container
-Version: @PACKAGE_VERSION@
-Requires: libwebp >= 0.2.0
-Cflags: -I${includedir}
-Libs: -L${libdir} -lwebpmux
-Libs.private: -lm
+version https://git-lfs.github.com/spec/v1
+oid sha256:366134069a7d257e3268dfa721db6f273f65f432d481f449dbed85b76b38308c
+size 297

@@ -1,30 +1,3 @@
-//
-//  Login.swift
-//  OriginalApplication
-//
-//  Created by 濱田広毅 on 2020/07/20.
-//  Copyright © 2020 濱田広毅. All rights reserved.
-//
-
-import Foundation
-import Firebase
-
-class AccountLogin
-{
-   
-    func AccountLogin(email:String, password:String)
-    {
-        
-        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-            
-            if(error != nil)
-            {
-                print(error as Any)
-            }
-            else
-            {
-                print("ログイン成功")
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4b869abb37c94a165f651ab4e2086d28b35826573125e3fb9ebee12f03d89d9d
+size 575

@@ -1,23 +1,3 @@
-/*
- * This file is part of the SDWebImage package.
- * (c) Olivier Poitrey <rs@dailymotion.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
-#import "SDWebImageCompat.h"
-
-#if SD_MAC
-
-#import <Cocoa/Cocoa.h>
-
-@interface NSImage (WebCache)
-
-- (CGImageRef)CGImage;
-- (NSArray<NSImage *> *)images;
-- (BOOL)isGIF;
-
-@end
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:dcd3b43c8c8cbd32e965100639a1cada42f8ba762a0a54decb7746ff7dde877c
+size 412

@@ -1,11 +1,3 @@
-prefix=@prefix@
-exec_prefix=@exec_prefix@
-libdir=@libdir@
-includedir=@includedir@
-
-Name: libwebp
-Description: Library for the WebP graphics format
-Version: @PACKAGE_VERSION@
-Cflags: -I${includedir}
-Libs: -L${libdir} -lwebp
-Libs.private: -lm @PTHREAD_CFLAGS@ @PTHREAD_LIBS@
+version https://git-lfs.github.com/spec/v1
+oid sha256:5f14ddce293dfa99ddd353b6579430410c04c049c6ab3d1fa9e3fce9886caf64
+size 273

@@ -1,25 +1,3 @@
-/*
- * This file is part of the SDWebImage package.
- * (c) Olivier Poitrey <rs@dailymotion.com>
- * (c) Laurin Brandner
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
-#import "SDWebImageCompat.h"
-
-@interface UIImage (GIF)
-
-/**
- *  Creates an animated UIImage from an NSData.
- *  For static GIF, will create an UIImage with `images` array set to nil. For animated GIF, will create an UIImage with valid `images` array.
- */
-+ (UIImage *)sd_animatedGIFWithData:(NSData *)data;
-
-/**
- *  Checks if an UIImage instance is a GIF. Will use the `images` array.
- */
-- (BOOL)isGIF;
-
-@end
+version https://git-lfs.github.com/spec/v1
+oid sha256:2296220aa4eec661be731ec93fba4d207b895aa233ebe766a95022a5566038cb
+size 663

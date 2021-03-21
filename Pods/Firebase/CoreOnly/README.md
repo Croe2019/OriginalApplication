@@ -1,7 +1,3 @@
-# Firebase APIs for iOS
-
-Simplify your iOS development, grow your user base, and monetize more
-effectively with Firebase services.
-
-Much more information can be found at
-[https://firebase.google.com/docs/ios/setup](https://firebase.google.com/docs/ios/setup).
+version https://git-lfs.github.com/spec/v1
+oid sha256:1d2b502a63b7db77326177b07b53e9a6b1564c232019f88d841a9ffe5babbf54
+size 260

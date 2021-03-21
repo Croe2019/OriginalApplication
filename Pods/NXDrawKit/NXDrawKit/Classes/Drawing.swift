@@ -1,20 +1,3 @@
-//
-//  Drawing.swift
-//  NXDrawKit
-//
-//  Created by Nicejinux on 2016. 7. 22..
-//  Copyright © 2016년 Nicejinux. All rights reserved.
-//
-
-import UIKit
-
-
-open class Drawing: NSObject {
-    @objc open var stroke: UIImage?
-    @objc open var background: UIImage?
-    
-    @objc public init(stroke: UIImage? = nil, background: UIImage? = nil) {
-        self.stroke = stroke
-        self.background = background
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4ce797fab8a4f53bffc0852bf1487c4f69d7e0984bfbadb70c8eda4094f8c25f
+size 418

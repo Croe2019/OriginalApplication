@@ -1,11 +1,3 @@
-prefix=@prefix@
-exec_prefix=@exec_prefix@
-libdir=@libdir@
-includedir=@includedir@
-
-Name: libwebpdecoder
-Description: Library for the WebP graphics format (decode only)
-Version: @PACKAGE_VERSION@
-Cflags: -I${includedir}
-Libs: -L${libdir} -lwebpdecoder
-Libs.private: -lm @PTHREAD_CFLAGS@ @PTHREAD_LIBS@
+version https://git-lfs.github.com/spec/v1
+oid sha256:94dd085e22b596ec874ccb48ab6819ee42442ee5cf73369bf297e8c7aef8c6b3
+size 301

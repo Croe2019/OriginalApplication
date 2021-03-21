@@ -1,16 +1,3 @@
-//
-//  PKHUDAnimatingContentView.swift
-//  PKHUD
-//
-//  Created by Philip Kluz on 9/27/15.
-//  Copyright (c) 2016 NSExceptional. All rights reserved.
-//  Licensed under the MIT license.
-//
-
-import UIKit
-
-@objc public protocol PKHUDAnimating {
-
-    func startAnimation()
-    @objc optional func stopAnimation()
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5ecdb5a692496053ca75ef939ddc98046eb4e045880b6c28c29c537434ba517c
+size 312

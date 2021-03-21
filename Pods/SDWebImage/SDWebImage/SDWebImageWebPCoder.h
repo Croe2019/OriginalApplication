@@ -1,23 +1,3 @@
-/*
- * This file is part of the SDWebImage package.
- * (c) Olivier Poitrey <rs@dailymotion.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
-#ifdef SD_WEBP
-
-#import <Foundation/Foundation.h>
-#import "SDWebImageCoder.h"
-
-/**
- Built in coder that supports WebP and animated WebP
- */
-@interface SDWebImageWebPCoder : NSObject <SDWebImageProgressiveCoder>
-
-+ (nonnull instancetype)sharedCoder;
-
-@end
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:d6724947a21d6e1dd0b8780eaf08169e48df08160492f984a977dd23b200d2a8
+size 493

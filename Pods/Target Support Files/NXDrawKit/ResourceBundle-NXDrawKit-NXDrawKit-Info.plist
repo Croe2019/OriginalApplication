@@ -1,24 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-  <key>CFBundleDevelopmentRegion</key>
-  <string>en</string>
-  <key>CFBundleIdentifier</key>
-  <string>${PRODUCT_BUNDLE_IDENTIFIER}</string>
-  <key>CFBundleInfoDictionaryVersion</key>
-  <string>6.0</string>
-  <key>CFBundleName</key>
-  <string>${PRODUCT_NAME}</string>
-  <key>CFBundlePackageType</key>
-  <string>BNDL</string>
-  <key>CFBundleShortVersionString</key>
-  <string>0.8.1</string>
-  <key>CFBundleSignature</key>
-  <string>????</string>
-  <key>CFBundleVersion</key>
-  <string>1</string>
-  <key>NSPrincipalClass</key>
-  <string></string>
-</dict>
-</plist>
+version https://git-lfs.github.com/spec/v1
+oid sha256:2d2236814a6d22035c3ddf799b3c683b0a468427f0afd98985f6ac5366cfc020
+size 733

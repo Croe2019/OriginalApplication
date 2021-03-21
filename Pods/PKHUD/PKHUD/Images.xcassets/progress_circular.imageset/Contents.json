@@ -1,15 +1,3 @@
-{
-  "images" : [
-    {
-      "idiom" : "universal",
-      "filename" : "progress_circular.pdf"
-    }
-  ],
-  "info" : {
-    "version" : 1,
-    "author" : "xcode"
-  },
-  "properties" : {
-    "template-rendering-intent" : "original"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6eb61791d9200dee3b5a6b631b1c7a504625e119bdaac11313b34ef31dd0f270
+size 235

@@ -1,21 +1,3 @@
-#ifdef __OBJC__
-#import <UIKit/UIKit.h>
-#else
-#ifndef FOUNDATION_EXPORT
-#if defined(__cplusplus)
-#define FOUNDATION_EXPORT extern "C"
-#else
-#define FOUNDATION_EXPORT extern
-#endif
-#endif
-#endif
-
-#import "GTMAppAuth.h"
-#import "GTMAppAuthFetcherAuthorization+Keychain.h"
-#import "GTMAppAuthFetcherAuthorization.h"
-#import "GTMKeychain.h"
-#import "GTMOAuth2KeychainCompatibility.h"
-
-FOUNDATION_EXPORT double GTMAppAuthVersionNumber;
-FOUNDATION_EXPORT const unsigned char GTMAppAuthVersionString[];
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:ff73e14135b422a8038aa92c61ed5066db5a92e9e1e3f36df263c970a95e6451
+size 497

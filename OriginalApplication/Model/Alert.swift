@@ -1,18 +1,3 @@
-//
-//  Alert.swift
-//  OriginalApplication
-//
-//  Created by 濱田広毅 on 2020/08/31.
-//  Copyright © 2020 濱田広毅. All rights reserved.
-//
-
-import Foundation
-import UIKit
-
-class Alert: UIViewController{
-    
-    var camera = Camera()
-    var album = Album()
-    
-    
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1fca2ed375c0b74c7e4c650a75ac706e2494f89c5ab8899837b80e36b7f91d45
+size 280

@@ -1,20 +1,3 @@
-//
-//  DKAssetGroupDetailBaseCell.swift
-//  DKImagePickerControllerDemo
-//
-//  Created by ZhangAo on 03/01/2017.
-//  Copyright © 2017 ZhangAo. All rights reserved.
-//
-
-import UIKit
-
-@objc
-open class DKAssetGroupDetailBaseCell: UICollectionViewCell, DKAssetGroupCellItemProtocol {
-    
-    // This method must be overridden
-    open class func cellReuseIdentifier() -> String { preconditionFailure("This method must be overridden") }
-    
-    open weak var asset: DKAsset?
-    open var index: Int = 0
-    open var thumbnailImage: UIImage!
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0d0143fe176137ce13c6b4d9c51a8fec24637d12ac7ee0ff6fc1b599bd6a8988
+size 541

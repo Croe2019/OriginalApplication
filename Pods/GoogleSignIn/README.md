@@ -1,18 +1,3 @@
-# Google Sign-In SDK for iOS
-
-The Google Sign-In SDK allows users to sign in with their Google account from
-third-party apps.
-
-Please visit [our developer site](https://developers.google.com/identity/sign-in/ios/)
-for integration instructions, documentation, support information, and terms of
-service.
-
-## Getting Started
-
-* Try our example app with:
-  ```
-  $ pod try GoogleSignIn
-  ```
-  and follow the directions [here](https://developers.google.com/identity/sign-in/ios/start).
-* Read our [getting started guides](https://developers.google.com/identity/sign-in/ios/start-integrating).
-* Take a look at the [API reference](https://developers.google.com/identity/sign-in/ios/api/).
+version https://git-lfs.github.com/spec/v1
+oid sha256:c987aaa6ef42bcb4dccd177f25ccaa412e3551be123bcb2d3853f2a664d29868
+size 684

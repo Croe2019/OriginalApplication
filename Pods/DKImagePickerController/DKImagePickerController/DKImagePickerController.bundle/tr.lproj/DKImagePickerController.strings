@@ -1,31 +1,3 @@
-//
-//  GitHub
-//  https://github.com/zhangao0086/DKImagePickerController
-//
-//
-//  License
-//  Copyright (c) 2014 ZhangAo
-//  Released under an MIT license: http://opensource.org/licenses/MIT
-//
-
-"select" = "Seçili(%@)";
-
-"permissionCamera" = "Kamera erişimine izin veriniz.";
-
-"permissionPhoto" = "Fotoğraf erişimine izin veriniz.";
-
-"permit" = "Erişim izni veriniz.";
-
-"gotoSettings" = "Erişim izni vermek için Ayarlar'a gidiniz.";
-
-"ok" = "Tamam";
-
-"selectPhotosOrVideos" = "Fotoğraf veya video seçiniz.";
-
-"selectPhotosOrVideosError" = "Aynı anda fotoğraf ve video seçimi yapamazsınız.";
-
-"done" = "Tamam";
-
-"maxLimitReached" = "Maksimum fotoğraf limitine ulaştınız.";
-
-"maxLimitReachedMessage" = "%@ fotoğraf seçebilirsiniz.";
+version https://git-lfs.github.com/spec/v1
+oid sha256:ed74b5b4c1c26da6d06dfb240bb3a7af75d15cfbffc2dca0e00bd15278f842d1
+size 752

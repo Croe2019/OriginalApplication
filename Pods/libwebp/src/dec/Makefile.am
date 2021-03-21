@@ -1,29 +1,3 @@
-AM_CPPFLAGS += -I$(top_builddir) -I$(top_srcdir)
-noinst_LTLIBRARIES = libwebpdecode.la
-
-libwebpdecode_la_SOURCES =
-libwebpdecode_la_SOURCES += alpha_dec.c
-libwebpdecode_la_SOURCES += alphai_dec.h
-libwebpdecode_la_SOURCES += buffer_dec.c
-libwebpdecode_la_SOURCES += common_dec.h
-libwebpdecode_la_SOURCES += vp8_dec.h
-libwebpdecode_la_SOURCES += frame_dec.c
-libwebpdecode_la_SOURCES += idec_dec.c
-libwebpdecode_la_SOURCES += io_dec.c
-libwebpdecode_la_SOURCES += quant_dec.c
-libwebpdecode_la_SOURCES += tree_dec.c
-libwebpdecode_la_SOURCES += vp8_dec.c
-libwebpdecode_la_SOURCES += vp8i_dec.h
-libwebpdecode_la_SOURCES += vp8l_dec.c
-libwebpdecode_la_SOURCES += vp8li_dec.h
-libwebpdecode_la_SOURCES += webp_dec.c
-libwebpdecode_la_SOURCES += webpi_dec.h
-
-libwebpdecodeinclude_HEADERS =
-libwebpdecodeinclude_HEADERS += ../webp/decode.h
-libwebpdecodeinclude_HEADERS += ../webp/types.h
-noinst_HEADERS =
-noinst_HEADERS += ../webp/format_constants.h
-
-libwebpdecode_la_CPPFLAGS = $(AM_CPPFLAGS)
-libwebpdecodeincludedir = $(includedir)/webp
+version https://git-lfs.github.com/spec/v1
+oid sha256:07b6e9d84e080a1f95bac4e357d241d60ebacddbf5792330df9a11a74495106d
+size 1026

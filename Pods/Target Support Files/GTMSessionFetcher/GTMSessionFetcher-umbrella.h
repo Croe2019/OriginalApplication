@@ -1,23 +1,3 @@
-#ifdef __OBJC__
-#import <UIKit/UIKit.h>
-#else
-#ifndef FOUNDATION_EXPORT
-#if defined(__cplusplus)
-#define FOUNDATION_EXPORT extern "C"
-#else
-#define FOUNDATION_EXPORT extern
-#endif
-#endif
-#endif
-
-#import "GTMSessionFetcher.h"
-#import "GTMSessionFetcherLogging.h"
-#import "GTMSessionFetcherService.h"
-#import "GTMSessionUploadFetcher.h"
-#import "GTMGatherInputStream.h"
-#import "GTMMIMEDocument.h"
-#import "GTMReadMonitorInputStream.h"
-
-FOUNDATION_EXPORT double GTMSessionFetcherVersionNumber;
-FOUNDATION_EXPORT const unsigned char GTMSessionFetcherVersionString[];
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:7d5ca331f2cffc50287e5a6d9b7df4afad15a781afcbcc1a3dfaa70c09c8d0cb
+size 565
