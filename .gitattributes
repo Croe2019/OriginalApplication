@@ -1,3 +1,6 @@
+version https://git-lfs.github.com/spec/v1
+oid sha256:8d59cc3eb09ae84a288f95ee5d65a7d1627a133e5cd3f17fba841f5b62ed61a9
+size 146
 *.DS_Store filter=lfs diff=lfs merge=lfs -text
 *.pbxproj filter=lfs diff=lfs merge=lfs -text
 *.xcworkspacedata filter=lfs diff=lfs merge=lfs -text
@@ -69,3 +72,9 @@
 *.rc filter=lfs diff=lfs merge=lfs -text
 *.bak filter=lfs diff=lfs merge=lfs -text
 *.txt filter=lfs diff=lfs merge=lfs -text
+*.xib filter=lfs diff=lfs merge=lfs -text
+/Pods/EmptyStateKit/LICENSE filter=lfs diff=lfs merge=lfs -text
+/Pods/FanMenu/LICENSE filter=lfs diff=lfs merge=lfs -text
+/Pods/GSImageViewerController/LICENSE filter=lfs diff=lfs merge=lfs -text
+/Pods/SWXMLHash/LICENSE filter=lfs diff=lfs merge=lfs -text
+/Pods/TextFieldEffects/LICENSE filter=lfs diff=lfs merge=lfs -text
