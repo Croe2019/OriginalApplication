@@ -78,3 +78,9 @@ size 100
 /Pods/GSImageViewerController/LICENSE filter=lfs diff=lfs merge=lfs -text
 /Pods/SWXMLHash/LICENSE filter=lfs diff=lfs merge=lfs -text
 /Pods/TextFieldEffects/LICENSE filter=lfs diff=lfs merge=lfs -text
+*.mlmodel filter=lfs diff=lfs merge=lfs -text
+/Pods/FirebaseABTesting/LICENSE filter=lfs diff=lfs merge=lfs -text
+/Pods/FirebaseMLNLTranslate/Frameworks/FirebaseMLNLTranslate.framework/FirebaseMLNLTranslate filter=lfs diff=lfs merge=lfs -text
+/Pods/FirebaseMLNaturalLanguage/Frameworks/FirebaseMLNaturalLanguage.framework/FirebaseMLNaturalLanguage filter=lfs diff=lfs merge=lfs -text
+/Pods/GTMAppAuth/LICENSE filter=lfs diff=lfs merge=lfs -text
+/Pods/Macaw/LICENSE filter=lfs diff=lfs merge=lfs -text
