@@ -10,12 +10,6 @@
 		E3F069E9733E11C55044F6D1 /* Pods_OriginalApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313F38053FF634F4090B82F0 /* Pods_OriginalApplication.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		FE01510E24C473D90046A550 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE01510D24C473D90046A550 /* HomeController.swift */; };
 		FE0A0DA024EFDE21006BA118 /* LogOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0A0D9F24EFDE21006BA118 /* LogOut.swift */; };
-		FE19E32526562CBC0001C322 /* iPhone11.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE19E32426562CBC0001C322 /* iPhone11.storyboard */; };
-		FE19E327265640050001C322 /* iPhone8Plus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE19E326265640040001C322 /* iPhone8Plus.storyboard */; };
-		FE19E329265651E40001C322 /* iPhone11ProMax.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE19E328265651E40001C322 /* iPhone11ProMax.storyboard */; };
-		FE19E32B2656537B0001C322 /* iPhone12.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE19E32A2656537B0001C322 /* iPhone12.storyboard */; };
-		FE19E32D265655AA0001C322 /* iPhone12ProMax.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE19E32C265655AA0001C322 /* iPhone12ProMax.storyboard */; };
-		FE19E32F2656572E0001C322 /* iPhone12mini.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE19E32E2656572E0001C322 /* iPhone12mini.storyboard */; };
 		FE1D5BBF24C469810097B2F1 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D5BBE24C469810097B2F1 /* RegisterController.swift */; };
 		FE1D5BC124C46E3A0097B2F1 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D5BC024C46E3A0097B2F1 /* Register.swift */; };
 		FE24D0E925F345A0005D665B /* DataDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE24D0E825F345A0005D665B /* DataDelete.swift */; };
@@ -44,6 +38,12 @@
 		FE87AD4825E7ADE10030225B /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87AD4725E7ADE10030225B /* ScanViewController.swift */; };
 		FE87C5CE2529E095004FECC1 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87C5CD2529E094004FECC1 /* EditViewController.swift */; };
 		FE96862F252ECA7B005FFD8E /* EditSendToDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE96862E252ECA7B005FFD8E /* EditSendToDB.swift */; };
+		FE9908772663B98B0089A1D8 /* iPhone8Plus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE9908762663B98B0089A1D8 /* iPhone8Plus.storyboard */; };
+		FE9908792663BAA10089A1D8 /* iPhone11.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE9908782663BAA10089A1D8 /* iPhone11.storyboard */; };
+		FE99087D2663BCC60089A1D8 /* iPhone11ProMax.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE99087C2663BCC60089A1D8 /* iPhone11ProMax.storyboard */; };
+		FE99087F2663BD650089A1D8 /* iPhone12.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE99087E2663BD650089A1D8 /* iPhone12.storyboard */; };
+		FE9908812663BE390089A1D8 /* iPhone12ProMax.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE9908802663BE390089A1D8 /* iPhone12ProMax.storyboard */; };
+		FE9908832663BEDE0089A1D8 /* iPhone12mini.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE9908822663BEDE0089A1D8 /* iPhone12mini.storyboard */; };
 		FE9B67C324DC0E3B00EC2AFF /* SendToDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9B67C224DC0E3B00EC2AFF /* SendToDB.swift */; };
 		FE9B67C524DC16F200EC2AFF /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9B67C424DC16F200EC2AFF /* Memo.swift */; };
 		FEA8FBB1264EA6110069436D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEA8FBB0264EA6110069436D /* GoogleService-Info.plist */; };
@@ -70,12 +70,6 @@
 		AB5031ADCBFA63F8904D334B /* Pods-OriginalApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OriginalApplication.debug.xcconfig"; path = "Target Support Files/Pods-OriginalApplication/Pods-OriginalApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		FE01510D24C473D90046A550 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		FE0A0D9F24EFDE21006BA118 /* LogOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOut.swift; sourceTree = "<group>"; };
-		FE19E32426562CBC0001C322 /* iPhone11.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhone11.storyboard; sourceTree = "<group>"; };
-		FE19E326265640040001C322 /* iPhone8Plus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhone8Plus.storyboard; sourceTree = "<group>"; };
-		FE19E328265651E40001C322 /* iPhone11ProMax.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhone11ProMax.storyboard; sourceTree = "<group>"; };
-		FE19E32A2656537B0001C322 /* iPhone12.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhone12.storyboard; sourceTree = "<group>"; };
-		FE19E32C265655AA0001C322 /* iPhone12ProMax.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhone12ProMax.storyboard; sourceTree = "<group>"; };
-		FE19E32E2656572E0001C322 /* iPhone12mini.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhone12mini.storyboard; sourceTree = "<group>"; };
 		FE1D5BBE24C469810097B2F1 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		FE1D5BC024C46E3A0097B2F1 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		FE24D0E825F345A0005D665B /* DataDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDelete.swift; sourceTree = "<group>"; };
@@ -105,6 +99,12 @@
 		FE87AD4725E7ADE10030225B /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		FE87C5CD2529E094004FECC1 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		FE96862E252ECA7B005FFD8E /* EditSendToDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSendToDB.swift; sourceTree = "<group>"; };
+		FE9908762663B98B0089A1D8 /* iPhone8Plus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhone8Plus.storyboard; sourceTree = "<group>"; };
+		FE9908782663BAA10089A1D8 /* iPhone11.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhone11.storyboard; sourceTree = "<group>"; };
+		FE99087C2663BCC60089A1D8 /* iPhone11ProMax.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhone11ProMax.storyboard; sourceTree = "<group>"; };
+		FE99087E2663BD650089A1D8 /* iPhone12.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhone12.storyboard; sourceTree = "<group>"; };
+		FE9908802663BE390089A1D8 /* iPhone12ProMax.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhone12ProMax.storyboard; sourceTree = "<group>"; };
+		FE9908822663BEDE0089A1D8 /* iPhone12mini.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhone12mini.storyboard; sourceTree = "<group>"; };
 		FE9B67C224DC0E3B00EC2AFF /* SendToDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendToDB.swift; sourceTree = "<group>"; };
 		FE9B67C424DC16F200EC2AFF /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		FEA8FBB0264EA6110069436D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -220,12 +220,12 @@
 			children = (
 				FEDE120A24B8896F008FB1CF /* Main.storyboard */,
 				FEDE11FC24B8893C008FB1CF /* Assets.xcassets */,
-				FE19E32426562CBC0001C322 /* iPhone11.storyboard */,
-				FE19E326265640040001C322 /* iPhone8Plus.storyboard */,
-				FE19E328265651E40001C322 /* iPhone11ProMax.storyboard */,
-				FE19E32A2656537B0001C322 /* iPhone12.storyboard */,
-				FE19E32C265655AA0001C322 /* iPhone12ProMax.storyboard */,
-				FE19E32E2656572E0001C322 /* iPhone12mini.storyboard */,
+				FE9908762663B98B0089A1D8 /* iPhone8Plus.storyboard */,
+				FE9908782663BAA10089A1D8 /* iPhone11.storyboard */,
+				FE99087C2663BCC60089A1D8 /* iPhone11ProMax.storyboard */,
+				FE99087E2663BD650089A1D8 /* iPhone12.storyboard */,
+				FE9908802663BE390089A1D8 /* iPhone12ProMax.storyboard */,
+				FE9908822663BEDE0089A1D8 /* iPhone12mini.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -329,16 +329,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE19E32B2656537B0001C322 /* iPhone12.storyboard in Resources */,
-				FE19E329265651E40001C322 /* iPhone11ProMax.storyboard in Resources */,
+				FE99087F2663BD650089A1D8 /* iPhone12.storyboard in Resources */,
 				FEDE120024B8893C008FB1CF /* LaunchScreen.storyboard in Resources */,
-				FE19E32526562CBC0001C322 /* iPhone11.storyboard in Resources */,
-				FE19E327265640050001C322 /* iPhone8Plus.storyboard in Resources */,
 				FEA8FBB1264EA6110069436D /* GoogleService-Info.plist in Resources */,
-				FE19E32D265655AA0001C322 /* iPhone12ProMax.storyboard in Resources */,
 				FEDE11FD24B8893C008FB1CF /* Assets.xcassets in Resources */,
+				FE99087D2663BCC60089A1D8 /* iPhone11ProMax.storyboard in Resources */,
+				FE9908792663BAA10089A1D8 /* iPhone11.storyboard in Resources */,
+				FE9908812663BE390089A1D8 /* iPhone12ProMax.storyboard in Resources */,
+				FE9908772663B98B0089A1D8 /* iPhone8Plus.storyboard in Resources */,
 				FEDE120B24B8896F008FB1CF /* Main.storyboard in Resources */,
-				FE19E32F2656572E0001C322 /* iPhone12mini.storyboard in Resources */,
+				FE9908832663BEDE0089A1D8 /* iPhone12mini.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

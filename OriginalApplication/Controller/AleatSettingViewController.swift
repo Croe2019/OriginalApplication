@@ -18,6 +18,7 @@ class AleatSettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        notificationDatePicker.preferredDatePickerStyle = .wheels
         addNotificationButton.layer.cornerRadius = 8
         addNotificationButton.layer.borderWidth = 1
         addNotificationButton.layer.borderColor = UIColor.systemBlue.cgColor
